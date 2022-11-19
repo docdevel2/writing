@@ -1,2 +1,2 @@
-# John Cofield's writing
+# John Cofield's writing repo
 ## Drafts and published
