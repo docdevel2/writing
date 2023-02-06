@@ -1,7 +1,11 @@
 # API Benefits 
 
-	* 	uniform interface between separate components
-	* 	RESTful Dynamic content uses server-side rendering which renders the page in the user's web browser.
+## Feature/benefits
+
+* 	uniform interface between separate components
+	* components are interchangeable
+	* less dependency and more flexibility
+* 	RESTful Dynamic content uses server-side rendering which renders the page in the user's web browser.
 	* 	widely accepted so lots of applications,libraries, tools; no need to worry about support infrastructure 
 	* 	Responses are generally formatted as either JSON or XML, both widely accepted 
 	* 	RESTful systems aim for:
