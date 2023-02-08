@@ -22,9 +22,9 @@
 
 ## Mini REST API
 
-For developers interested in integrating server-based internet services into their applications, an application programming interface (API) can be an appealing solution. An application programming interface allows a client application to interact with a server using a common protocol.
+For developers interested in integrating server-based internet services into their applications, an application programming interface (API) can be an appealing solution. An application programming interface allows a client application to interact with a server using a common interface.
 
-One such protocol is REpresentational State Transfer (REST). The REST protocol operates in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data. REST is a common protocol used by music API web sites. Web site APIs that employ the REST protocol are referred to as RESTful.
+Many music APIs comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints. APIs that comply with REST constraints are called RESTful. REST APIs operates in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
 
 ## Why REST?
 
