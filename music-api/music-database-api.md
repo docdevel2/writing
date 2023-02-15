@@ -24,21 +24,28 @@
 
 For developers interested in integrating server-based internet services into their applications, an application programming interface (API) can be an appealing solution. An application programming interface allows a client application to interact with a server using a common interface.
 
-Many music APIs comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints. APIs that comply with REST constraints are called RESTful. REST APIs operates in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
+Many music APIs comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints. APIs that comply with REST constraints are called RESTful. REST APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
+
+In this article, I will show how you can access a RESTful API database with Python. I will deconstruct the data sent by the client to the server, and the corresponding response received by the client from the server. To illustrate the mechanics of the process, I will use a RESTful music database API.
 
 ## Why REST?
 
-A RESTful API allows the client to retrieve data from the server without the need to details the server backend implementation. There is no need for the client to know which server or database management software is being used. In addition, the API enhances security by restricting who can access data, what data is accessible.
+A RESTful API allows the client to retrieve data from the server without the need to know details about the server back-end implementation. There is no need for the client to know which server or database management software is being used. In addition, the API enhances security by restricting who can access data and also, selectively restrict the data that can be accessed.
 
 In a RESTful Web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as OPTIONS, GET, POST, PUT, PATCH and DELETE.
 
-## Risky alternative
+## Music API
+Several well known music services provide REST API database access to both directly to musicians and to partners who want to integrate their content and/or music into commercial products. 
 
-The alternative to using an API is a custom interface. That would require code that is customized for a particular client to interface with  a specific service provider's resources, including server, database, and other resources. This approach  involves risks for both the client, and the service provider.
+Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
+> Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
+> (Note: The sentence above was copied verbatum from "Web API | Spotify for Developers". Need to massage before including i article.)
 
-The client is potentially locked-in to the service provider in that any changes the service provider makes to internal resources (e.g. system upgrade) may require changes on the client's side. 
+SoundCloud is a music service that allows musicians to share their music with a community of artists and listeners. Musicians can use the API to upload upload and manage their music for their listeners.
 
-On the server side, giving a client application direct access to internal resources could expose the client to sensitive resources and data, or worse, the possibility of system corruption, including security breaches.
+MusicBrainz view themselves as an open encyclopedia for music metadata, modeled after Wikipedia in that it is community-driven. It's metadata content is primarily, but not exclusively targeted at music player and tagger applications.
+
+> Next steps: Principles of HTTP Requests/Responses.
 
 ## Benefits
 
