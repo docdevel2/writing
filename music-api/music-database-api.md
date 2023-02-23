@@ -2,14 +2,60 @@
 
 ## Overview
 
-For developers interested in integrating network-based services into their applications, an application programming interface (API) can be an appealing solution. An application programming interface allows a client application to interact with a server using a common interface. Network-base APIs are becoming increasingly popular for web applications in industries such as banking, e-commerce, internet of things (IoT), and music.  
+If you are a developer who wants to integrate network-based services into your applications, an application programming interface (API) can be an appealing solution. An application programming interface allows your client application to interact with a server using a common interface. Network-base APIs are becoming increasingly popular for web applications in industries such as banking, e-commerce, internet of things (IoT), and music.  
 
-Many network-based music APIs comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints. APIs that comply with REST constraints are called RESTful. REST APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
+Many network-based web services offer APIs that comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints. APIs that comply with REST constraints are called RESTful. REST APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
 
-In this article, I will show how you can access a RESTful API database with Python. I will deconstruct the data sent by the client to the server, and the corresponding response received by the client from the server. To illustrate the mechanics of the process, I will use Python HTTP module to connect to a RESTful music database API.
+In this article, I will show how you can access a RESTful API database with Python. I will deconstruct the data sent by the client to the server, and the corresponding response received by the client from the server. To illustrate the mechanics of the process, I will use a Python HTTP module to connect to a RESTful music database API.
 
 > **Insert client-server model graphic here.**
 
+## Why REST?
+
+A RESTful API allows the client to retrieve data from the server without the need to know details about the server back-end implementation. There is no need for the client to know which server or database management software is being used. In addition, the API enhances security by restricting who can access data and also, selectively restrict the data that can be accessed.
+
+In a RESTful Web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
+
+Abbreviated descriptions the REST constraints are: 
+ 
+* identification of resources
+* manipulation of resources through representations
+* self-descriptive messages
+* hypermedia as the engine of the application state 
+
+(This means that HTTP is the primary transfer protocol. See "Stateless".)
+
+Note: While protocols like ftp and others are supported, they cannot be considered RESTful unless they conform to REST constraints.
+
+(See [2] for more details.)
+
+
+## Benefits
+
+> (Ref. RFC 9110) "... uniform interfaces provide for better visibility and reuse in network-based systems."
+
+An API isolates the client from the server, only allowing communication through a uniform interfaces provide for better visibility and reuse in network-based systems. As a result, implementation changes on either client-side or server-side can be made without either affecting the other, as long as the interface protocol is followed.
+
+A RESTful API benefits developers because it allows developers to connect client components to a server through a standard interface. This allows replaceable components to be swapped without changing code on either side of the interface. As an analogy, consider USB devices that connect to a computer. Mutiple USB devices, with the same or different functions, can connect to the same USB port and still function properly.
+
+RESTful APIs are widely accepted because they leverage existing HTTP infrastructure, the same infrastructure and protocols that browsers use. As a result, lots of tools (applications, libraries, developers, etc.) are available. 
+
+From an end user perspective, you can use your existing browser as a client to access server databases. From a developer perspective, you can easily integrate server data and resources into your applications. From a service provider perspective, it allows you to make their services readily accessible to a wider audience. 
+
+I previously mentioned identifiers to identify target resources. In a REST API, these identifiers are referred to as representations. By design, a REST API never manipulates server resources directly. Instead, it only manipulates their representations, the identifiers. You will see, in the upcoming examples, how these representations are communicated between client and server.
+
+## Music APIs
+Several well known music services provide REST API database access to both directly to musicians and to partners who want to integrate their content and/or music into commercial products. 
+
+Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
+> Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
+> (Note: The preceding sentence was copied verbatum from "Web API | Spotify for Developers". Need to massage before including i article.)
+
+SoundCloud is a music service that allows musicians to share their music with a community of artists and listeners. Musicians can use the API to upload upload and manage their music for their listeners.
+
+MusicBrainz view themselves as an open encyclopedia for music metadata, modeled after Wikipedia in that it is community-driven. It's metadata content is primarily, but not exclusively targeted at music player and tagger applications. In this article, I will use the MusicBrainz API as an example.
+
+Before we interact with a live API, we need to better understand the role that HTTP plays in web applications. 
 
 ## HTTP Primer
 
@@ -51,57 +97,6 @@ Content-Length: 1234567890987
 Expect: 100-continue  
 ```
 
-## Why REST?
-
-A RESTful API allows the client to retrieve data from the server without the need to know details about the server back-end implementation. There is no need for the client to know which server or database management software is being used. In addition, the API enhances security by restricting who can access data and also, selectively restrict the data that can be accessed.
-
-In a RESTful Web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
-
-Abbreviated descriptions the REST constraints are: 
- 
-* identification of resources
-* manipulation of resources
-* self-descriptive messages
-* hypermedia as the engine of the application state (This means that HTTP is the primary transfer protocol. See "Stateless".)
-
-Note: While protocols like ftp and others are supported, they cannot be considered RESTful unless they conform to REST constraints.
-
-(See [2] for more details.)
-
-
-## Benefits
-
-> (Ref. RFC 9110) "... uniform interfaces provide for better visibility and reuse in network-based systems."
-
-An API isolates the client from the server, only allowing communication through a uniform interfaces provide for better visibility and reuse in network-based systems. As a result, implementation changes on either client-side or server-side can be made without either affecting the other, as long as the interface protocol is followed.
-
-A RESTful API benefits developers because it allows developers to connect client components to a server through a standard interface. This allows replaceable components to be swapped without changing code on either side of the interface. As an analogy, consider USB devices that connect to a computer. Mutiple USB devices, with the same or different functions, can connect to the same USB port and still function properly.
-
-RESTful APIs are widely accepted because they leverage existing HTTP infrastructure, the same infrastructure and protocols that browsers use. As a result, lots of tools (applications, libraries, developers, etc.) are available. 
-
-From an end user perspective, you can use your existing browser as a client to access server databases. From a developer perspective, you can easily integrate server data and resources into your applications. From a service provider perspective, it allows you to make their services readily accessible to a wider audience. 
-
-I previously mentioned identifiers to identify target resources. In a REST API, these identifiers are referred to as representations. By design, a REST API never manipulates server resources directly. Instead, it only manipulates their representations, the identifiers. You will see, in the upcoming examples, how these representations are communicated between client and server.
-
-
-**Next steps:** Discuss URL syntax, generic & specific.  
-
-```  
-<scheme>://<authority><path>?<query>
-```
-
-## Music APIs
-Several well known music services provide REST API database access to both directly to musicians and to partners who want to integrate their content and/or music into commercial products. 
-
-Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
-> Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue.
-> (Note: The preceding sentence was copied verbatum from "Web API | Spotify for Developers". Need to massage before including i article.)
-
-SoundCloud is a music service that allows musicians to share their music with a community of artists and listeners. Musicians can use the API to upload upload and manage their music for their listeners.
-
-MusicBrainz view themselves as an open encyclopedia for music metadata, modeled after Wikipedia in that it is community-driven. It's metadata content is primarily, but not exclusively targeted at music player and tagger applications. In this article, I will use the MusicBrainz API as an example.
-
-## Anatomy of a Request 
 Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL.
 
 > ([2] sec. 5.1.3)
@@ -177,9 +172,14 @@ In this example, the request uses the GET method which, is the default for urlli
 
 **Security**
 
-MusicBrainz POST requests require authentication for security reasons since data can be altered. In order to submit a POST request, an application must register using either a username/password or OAuth token. For more information on authentication, see "Development / OAuth2 - MusicBrainz"[5]. No authentication is required for most GET requests as I demonstrated in my example.
+Web API typically require some sort of authentication to verify that the user submitting a request is authorized to do so. Some of the common authentication protocols include HTTP Digest Access Authentication, JSON Web Token (JWT), and OAuth 2. HTTP Digest Access Authentication uses 256 or 512 hash encrypted username and password to authorize access. JWT and OAuth 2 use tokens, generated by a third party authorization server, that you authorize in advance to give you access to one or more applications. The token approach effectively gives you a single sign-on source so you don't have to repeatedly re-enter your username and password.
+
+MusicBrainz POST requests require authentication for security reasons since data can be altered. In order to submit a POST request, a client application must register using either a username/password or OAuth 2 token. An authorization request must be submitted prior to submitting a POST request. For more information on MusicBrainz authentication, see "Development / OAuth2 - MusicBrainz"[5]. No authentication is required for most GET requests as I demonstrated in my example.
 
 
+## Summary
+
+We've covered how the ubiquitous HTTP open standard along with well-defined REST architectural constraints enable you to develop client applications that are flexible and secure. Client and server components and be independently updated or migrated more easily than tightly integrated systems. Manipulation of representations rather than resources combined with a variety of authentication options enhance security. Whether REST APIs thrive in the music industry or any other industry remains to be seen. If the REST APIs live to expectations, the future will be bright.
 
 
 ## References
@@ -191,35 +191,4 @@ MusicBrainz POST requests require authentication for security reasons since data
 6. [Guido van Rossum and the Python development team, *The Python Library Reference*, Release 3.10.5, July 21, 2022](https://docs.python.org/3.10/library/urllib.html)
 
 
-## Research Notes
-
-
-> Stateless: each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of any stored context on the server. Session state is therefore kept entirely on the client. (Ref. Dissertation quote; sec. 5.1.3)
-
-* Authentication (Ref. [4] MusicBrainz FAQ)
-
-All POST requests require authentication. You should authenticate using HTTP Digest, using the same username and password you use to access the main https://musicbrainz.org website. The realm is "musicbrainz.org".
-
-> **Note:** What is "HTTP Digest" in paragraph above? (See "Development / OAuth2 - MusicBrainz". OAuth2 is an alternative to "HTTP Digest")
-
-POST requests should always include a 'client' parameter in the URL (not the body). The value of 'client' should be the ID of the client software submitting data. This has to be the application's name and version number, not that of a client library (client libraries should use HTTP's User-Agent header). The recommended format is "application-version", where version does not contain a - character.
-
-
-* Security (Ref. Dissertation)
-
-Security is a significant concern these days. With the proliferation of hacker attacks and viruses, it is critical that web servers offer protection against attacks and breaches. To combat these security threats, API providers commonly use a combination of these security measures.
-
-* API security
-* HTTP
-* API Keys (Bearer token, JSON Web Token)
-* 0Auth
-
-**Response**
-
-* response status code
-* selected representation
-	* A target resource might be provided with, or be capable of generating, multiple representations that are each intended to reflect the resource's current state. An algorithm, usually based on content negotiation (Section 12), would be used to select one of those representations as being most applicable to a given request. This **selected representation** provides the data and metadata for evaluating conditional requests (Section 13) and constructing the content for 200 (OK), 206 (Partial Content), and 304 (Not Modified) responses to GET (Section 9.3.1).
-
-> 6.3.2.7 Content Negotiation (Ref. Fielding Dissertation)
-All resources map a request (consisting of method, identifier, request-header fields, and sometimes a representation) to a response (consisting of a status code, response-header fields, and sometimes a representation).
-
+### 

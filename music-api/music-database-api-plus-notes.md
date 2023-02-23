@@ -279,6 +279,29 @@ This "generic URI" syntax consists of a sequence of four main components:
 
 `statcode = response.status`
 
+## Target audience
+
+    Application (client) developers
+
+
+## REST benefit highlights
+
+    Development flexibility
+        Independent of web server or client implementation
+        Implementation independence facilitates migration and/or upgrade
+    Security
+        Layered components allow security measures to be applied at multiple levels
+        Manipulation and transfer of representations restricts direct client access to server resources
+
+
+## Features that yield benefits
+
+    HTTP open standard
+    Well-defined constraints
+        Identification of resources
+        manipulation of resources through representations
+        Self-descriptive messages
+        Hypertext explicitly determines the state of the application
 
 
 
