@@ -69,5 +69,6 @@ Security: Note that the service must require apps to pre-register their redirect
 ## References
 1. [Getting Started with OAuth 2.0](https://blog.loginradius.com/engineering/oauth2/)
 2. [OAuth 2 Simplified](https://aaronparecki.com/oauth-2-simplified/)
+3. [OAuth](https://oauth.net/)
 
 ###
