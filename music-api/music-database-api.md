@@ -64,7 +64,9 @@ server for the purpose of sending one or more HTTP requests. An HTTP server is a
 
 When HTTP was first introduced (1990), the only method used to send requests was the GET method. It has since evolved to include additional methods to allow requests to modify and delete content on the server. Among these other methods are: GET, POST, PUT, and DELETE. You will see how some of these methods are used later when we get to the Python code described in this article. [1]
 
-> **Insert Table 1**
+![Table 1. HTTP Method](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/table1-http-methods.png)
+
+Table 1. HTTP Method
 
 **Requests**  
 When a request message is sent by a user agent (typically the client application) to a server, the message typically contains header fields that can include metadata such as: method, target host name, content type, content length, and/or other characteristics of the client, host, or message being sent. 
@@ -72,21 +74,8 @@ When a request message is sent by a user agent (typically the client application
 **Responses**  
 Upon receiving a request from a user agent, the server determines whether it can accept the request. If accepted, the server responds by sending a status code & a message back to the client. Response message content might include metadata and/or the requested target resource.
 
-**Example header**  
 
-This is an example of a header in a PUT request. [1]
-
-```
-PUT /somewhere/fun HTTP/1.1  
-Host: origin.example.com  
-Content-Type: video/h264  
-Content-Length: 1234567890987  
-Expect: 100-continue  
-```
-
-Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL.
-
-> ([2] sec. 5.1.3)
+Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL. [2]
 
 ## MusicBrainz API  
 
@@ -105,26 +94,17 @@ where:
 
 ## Python urllib module
 
-```python
-api_root + entity + mbid + inc + format
-
-api_root = "http://musicbrainz.org/ws/2"
-entity = "/recording"
-mbid = "/b97670e0-08fe-42fe-af39-7367a710c299"
-inc = "?inc=artists"
-format = “&fmt=json”
-```
-
 > Describe urllib and the Request object, followed by a description of what the code is doing.
 
 ```
-class urllib.request.Request(url, data=None, headers={}, unverifiable=False, method=None)
+request = urllib.request.Request(api_url)
 
 .Request will GET or PUT
 ```
 
 Using a simple code snippet in Python, this section shows you how to send an HTTPS request & capture the response. The API that we are using  is the MusicBrainz API web service. We will use the GET method to retrieve metadata for a single recording to illustrate the process.
 
+Libraries  
 
 ```python
 import json
@@ -132,24 +112,32 @@ import os
 import urllib.request
 import webbrowser
 import pprint
+```
 
-# Justice's Groove URL
-api_url = 'https://musicbrainz.org/ws/2/recording/\
-b97670e0-08fe-42fe-af39-7367a710c299?&fmt=json'
+**URL components**  
 
-def mbz_recording(api_url):
-    
-    request = urllib.request.Request(api_url)
-    with urllib.request.urlopen(request) as response:
-        data = json.loads(response.read().decode("utf-8"))
-        statcode = response.status
-    
-    pp = pprint.PrettyPrinter(indent=4)
-    pp.pprint(data)
-    
-    webbrowser.open_new_tab(api_url)
+```
+api_root = "https://musicbrainz.org/ws/2"
+entity = "/recording"
+mbid = "/b97670e0-08fe-42fe-af39-7367a710c299"
+jfmt = "?&fmt=json"
 
-    return
+api_url = api_root+entity+mbid+jfmt
+```
+
+
+```   
+request = urllib.request.Request(api_url)
+```
+
+```
+json.loads(response.read().decode("utf-8"))
+```
+
+Status
+
+```
+    statcode = response.status
 ```
 
 
@@ -161,6 +149,9 @@ Figure 3. Server response: JSON data to browser
 
 
 In this example, the request uses the GET method which, is the default for urllib when no method is specified. A POST request is sent to the server in a similar way, except that either the POST method must be specified and/or a `data` argument must be passed.
+
+![Figure 4. Python script](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig4-python-script.png)
+Figure 4. Python script
 
 **Security**
 
