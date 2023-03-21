@@ -2,7 +2,7 @@
 
 ## Overview
 
-If you are a developer who wants to integrate network-based services into your applications, an application programming interface (API) can be an appealing solution. An application programming interface allows your client application to interact with a server using a common interface. (Fig. 1) Network-base APIs are becoming increasingly popular for web applications in industries such as banking, e-commerce, internet of things (IoT), and music.  
+If you are a developer who wants to integrate network-based services into your applications, an application programming interface (API) can be an appealing solution. An application programming interface allows your client application to interact with a server using a common interface. (Figure 1) Network-base APIs are becoming increasingly popular for web applications in industries such as banking, e-commerce, internet of things (IoT), and music.  
 
 Many network-based web services offer APIs that comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints that I will explain later in this article. APIs that comply with REST constraints are called RESTful. REST APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
 
@@ -18,16 +18,12 @@ A RESTful API allows the client to retrieve data from the server without the nee
 
 In a RESTful web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
 
-Abbreviated descriptions the REST constraints are: 
+Abbreviated descriptions the REST constraints [1] are: 
  
 * identification of resources
 * manipulation of resources through representations
 * self-descriptive messages
 * hypermedia as the engine of the application state 
-
-(This means that HTTP is the primary transfer protocol. See "Stateless".)
-
-Note: While protocols like ftp and others are supported, they cannot be considered RESTful unless they conform to REST constraints.[2]
 
 ## Component isolation
 
@@ -47,11 +43,12 @@ We previously discussed identifiers to identify target resources. In a REST API,
 Several well known music services provide REST API database access to musicians and to partners who want to integrate their content and/or music into commercial products. 
 
 Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
+
 > According to the Spotify for Developer web site, "Spotify Web API endpoints return JSON metadata about music artists, albums, and tracks, directly from the Spotify Data Catalogue."
 
 SoundCloud is a music service that allows musicians to share their music with a community of artists and listeners. Musicians can use the API to upload upload and manage their music for their listeners.
 
-MusicBrainz view themselves as an open encyclopedia for music metadata, modeled after Wikipedia in that it is community-driven. It's metadata content is primarily, but not exclusively targeted at music player and tagger applications. In this article, I will use the MusicBrainz API as an example.
+MusicBrainz view themselves as an open encyclopedia for music metadata, modeled after Wikipedia in that it is community-driven. [3] It's metadata content is primarily, but not exclusively targeted at music player and tagger applications. In this article, I will use the MusicBrainz API as an example. 
 
 Before we discuss how to interact with an API, we will examine the role that HTTP plays in web applications. 
 
@@ -62,24 +59,24 @@ In order to understand REST APIs, it is essential to understand the role that HT
 An HTTP client is a program that establishes a connection to a
 server for the purpose of sending one or more HTTP requests. An HTTP server is a program that accepts connections in order to service HTTP requests by sending HTTP responses back to the client.
 
-When HTTP was first introduced (1990), the only method used to send requests was the GET method. It has since evolved to include additional methods to allow requests to modify and delete content on the server. Among these other methods are: GET, POST, PUT, and DELETE. You will see how some of these methods are used later when we get to the Python code described in this article. [1]
+When HTTP was first introduced (1990), the only method used to send requests was the GET method. It has since evolved to include additional methods to allow requests to modify and delete content on the server. Among these other methods are: GET, POST, PUT, and DELETE. You will see how some of these methods are used later when we get to the Python code described in this article. [2]
 
 ![Table 1. HTTP Method](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/table1-http-methods.png)
 
 Table 1. HTTP Method
 
-**Requests**  
+### Requests    
 When a request message is sent by a user agent (typically the client application) to a server, the message typically contains header fields that can include metadata such as: method, target host name, content type, content length, and/or other characteristics of the client, host, or message being sent. 
 
-**Responses**  
+### Responses  
 Upon receiving a request from a user agent, the server determines whether it can accept the request. If accepted, the server responds by sending a status code & a message back to the client. Response message content might include metadata and/or the requested target resource.
 
 
-Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL. [2]
+Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL [1]  
 
 ## MusicBrainz API  
 
-The MusicBrainz API gives the client access to a wide range of music metadata about artists & their music, including biographical information, release dates, media formats, etc. Requests are in the form of a URL that is comprised of multiple components, some mandatory, some optional. Syntax for the is as follows:
+The MusicBrainz API gives the client access to a wide range of music metadata about artists & their music, including biographical information, release dates, media formats, etc. Requests are in the form of a URL that is comprised of multiple components, some mandatory, some optional. [4] Syntax for the is as follows:
 
 `<api_root><entity><mbid><inc><format>`
 
@@ -94,17 +91,11 @@ where:
 
 ## Python urllib module
 
-> Describe urllib and the Request object, followed by a description of what the code is doing.
+This section shows you one approach to send an HTTP or HTTPS request & retrieve the response. You will see the modules and methods used. The API that we are using is the MusicBrainz API web service. We will use the GET method to retrieve metadata for a single recording to illustrate the process. We will request the response data in JSON format.
 
-```
-request = urllib.request.Request(api_url)
+There are multiple Python packages available to send HTTP requests and handle responses. Some require install external packages. For the purposes of this exercise, we will use the built-in urllib module [6] that does not require installing an external module.
 
-.Request will GET or PUT
-```
-
-Using a simple code snippet in Python, this section shows you how to send an HTTPS request & capture the response. The API that we are using  is the MusicBrainz API web service. We will use the GET method to retrieve metadata for a single recording to illustrate the process.
-
-Libraries  
+### Modules  
 
 ```python
 import json
@@ -114,44 +105,54 @@ import webbrowser
 import pprint
 ```
 
-**URL components**  
+### Methods & objects
 
+Below are the Python methods and objects that will be used to:
+
+* Send a request from the client (Python script)
+* Retrieve the the response data from the MusicBrainz server
+* Retrieve the response status code
+
+```python
+urllib.request.Request()
+json.loads()
+request.get_method()
+webbrowser.open_new_tab()
+request.host
+request.status
+request.type
 ```
+
+### URL components 
+
+These are the values assigned to the MusicBrainz URL components. Each component is concatenated to form the full URL (`api_url`) required to request the API resource. 
+
+```python
 api_root = "https://musicbrainz.org/ws/2"
 entity = "/recording"
 mbid = "/b97670e0-08fe-42fe-af39-7367a710c299"
 jfmt = "?&fmt=json"
 
+# Full API URL
 api_url = api_root+entity+mbid+jfmt
 ```
 
+In this example (Figure 2), the `urllib.request.Request(api_url)` method is used to request a resource. Since only argument is `api_url`, the request method defaults to `GET`. A POST request is sent to the server in a similar way, specifying `POST` and/or passing a `data` argument.
 
-```   
-request = urllib.request.Request(api_url)
-```
+![Figure 2. Python script](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig2-python-script.png)
+Figure 2. Python script  
 
-```
-json.loads(response.read().decode("utf-8"))
-```
+In Figure 3, we see the response values displayed in the IDLE Shell. window. While there is a lot of information returned in the response, we have selected to display the `type`, `host, and method,` to confirm that the request was sent to the MusicBrainz server, that it sent via secure HTTPS, and the `GET` method was used. 
 
-Status
+Note that the JSON data is deserialized by the json.loads() method, converted to Python dictionary form, and displayed. Finally, the code value '200' indicates that the request was successfully executed.  
 
-```
-    statcode = response.status
-```
+![Figure 3. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig3-http-music-api-response.png)  
+Figure 3. Server response: JSON data text output
 
+If you prefer viewing the data in a browser, one option is to use the `open_new_tab()` method from the Python built-in module `webbrowser`. The web browser output is shown in Figure 4.   
 
-![Figure 2. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig2-http-music-api-response.png)  
-Figure 2. Server response: JSON data text output
-
-![Figure 3. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig3-json-api-to-browser-2.png)  
-Figure 3. Server response: JSON data to browser
-
-
-In this example, the request uses the GET method which, is the default for urllib when no method is specified. A POST request is sent to the server in a similar way, except that either the POST method must be specified and/or a `data` argument must be passed.
-
-![Figure 4. Python script](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig4-python-script.png)
-Figure 4. Python script
+![Figure 4. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig4-json-api-to-browser-2.png)  
+Figure 4. Server response: JSON data to browser
 
 **Security**
 
@@ -162,12 +163,12 @@ MusicBrainz POST requests require authentication for security reasons since data
 
 ## Summary
 
-We've covered how the ubiquitous HTTP open standard along with well-defined REST architectural constraints enable you to develop client applications that are flexible and secure. Client and server components and be independently updated or migrated more easily than tightly integrated systems. Manipulation of representations rather than resources combined with a variety of authentication options enhance security. Whether REST APIs thrive in the music industry, e-commerce or any other industry remains to be seen. 
+We've covered how the ubiquitous HTTP open standard along with well-defined REST architectural constraints enable you to develop client applications that are flexible and secure. As we discussed, client and server components can be independently updated or migrated more easily than tightly integrated systems. Manipulation of representations rather than resources, combined with a variety of authentication options enhance security. Whether REST APIs thrive in the music industry, e-commerce or any other industry remains to be seen. As of today, however, they are widely available for you to investigate.
 
 ## References
-1. [HTTP Semantics, RFC 9110](https://httpwg.org/specs/rfc9110.html)
-2. [Fielding, R., “Architectural Styles and the Design of Network-based Software Architectures”, Doctoral Dissertation, University of California, Irvine, September 2000](https://roy.gbiv.com/pubs/dissertation/top.htm)
-3. [Uniform Resource Identifiers (URI): Generic Syntax, RFC 2396](https://www.ietf.org/rfc/rfc2396.txt)
+1. [Fielding, R., “Architectural Styles and the Design of Network-based Software Architectures”, Doctoral Dissertation, University of California, Irvine, September 2000](https://roy.gbiv.com/pubs/dissertation/top.htm)
+2. [HTTP Semantics, RFC 9110](https://httpwg.org/specs/rfc9110.html)
+3. [MusicBrainz (https://musicbrainz.org/)](https://musicbrainz.org/)
 4. [MusicBrainz FAQ](https://musicbrainz.org/doc/MusicBrainz_API#General_FAQ)
 5. [Development / OAuth2 - MusicBrainz](https://musicbrainz.org/doc/Development/OAuth2)
 6. [Guido van Rossum and the Python development team, *The Python Library Reference*, Release 3.10.5, July 21, 2022](https://docs.python.org/3.10/library/urllib.html)
