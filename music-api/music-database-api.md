@@ -18,7 +18,7 @@ A RESTful API allows the client to retrieve data from the server without the nee
 
 In a RESTful web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
 
-Abbreviated descriptions the REST constraints [1] are: 
+The following is a list of the REST interface constraints[1]: 
  
 * identification of resources
 * manipulation of resources through representations
@@ -27,19 +27,20 @@ Abbreviated descriptions the REST constraints [1] are:
 
 ## Component isolation
 
-An API isolates the client from the server, only allowing communication through a uniform interfaces facilitates development and debug by giving you better visibility into network components. As a result, implementation changes on either client-side or server-side can be made without either affecting the other, as long as the interface protocol is followed.[1]
+An API isolates the client from the server, allowing communication through a uniform interface. This facilitates your development and debug process by giving you better visibility into network components. As a result, implementation changes on either client-side or server-side can be made without either affecting the other, as long as the interface protocol is followed.[1]
 
-A RESTful API benefits developers because it allows developers to connect client components to a server through a standard interface. This allows replaceable components to be swapped without changing code on either side of the interface. As an analogy, consider USB devices that connect to a computer. Multiple USB devices, with the same or different functions, can connect to the same USB port and still function properly.
+A RESTful API benefits developers because it allows developers to connect client components to a server through a uniform interface. This allows replaceable components to be swapped without changing code on either side of the interface. As an analogy, consider USB devices that connect to a computer. Multiple USB devices, with the same or different functions, can connect to the same USB port and still function properly.
 
 ## Standard protocols
 
-RESTful APIs are widely accepted because they leverage existing HTTP infrastructure, the same infrastructure and protocols that browsers use. As a result, lots of tools (applications, libraries, developers, etc.) are available. 
+RESTful APIs are widely accepted because they leverage existing HTTP infrastructure, the same infrastructure and protocols that browsers use. As a result, lots of resources (applications, libraries, developers, etc.) are available. 
 
 From an end user perspective, you can use your existing browser as a client to access server databases. From a developer perspective, you can easily integrate server data and resources into your applications. From a service provider perspective, it allows you to make their services readily accessible to a wider audience. 
 
-We previously discussed identifiers to identify target resources. In a REST API, these identifiers are referred to as representations. By design, a REST API never manipulates server resources directly. Instead, it only manipulates their representations, the identifiers. You will see, in the upcoming examples, how these representations are used in communications between client and server.
+We previously discussed identifiers to identify target resources. In a REST API, these identifiers are referred to as representations. By design, a REST API never manipulates server resources directly. Instead, it only manipulates their representations, the identifiers. In the upcoming examples, you will see how these representations are used in communications between client and server.
 
 ## Music APIs
+
 Several well known music services provide REST API database access to musicians and to partners who want to integrate their content and/or music into commercial products. 
 
 Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
@@ -65,18 +66,19 @@ When HTTP was first introduced (1990), the only method used to send requests was
 
 Table 1. HTTP Method
 
-### Requests    
+### Requests 
+   
 When a request message is sent by a user agent (typically the client application) to a server, the message typically contains header fields that can include metadata such as: method, target host name, content type, content length, and/or other characteristics of the client, host, or message being sent. 
 
 ### Responses  
-Upon receiving a request from a user agent, the server determines whether it can accept the request. If accepted, the server responds by sending a status code & a message back to the client. Response message content might include metadata and/or the requested target resource.
 
+Upon receiving a request from a user agent, the server determines whether it can accept the request. If accepted, the server responds by sending a status code and a message back to the client. Response message content might include metadata and/or the requested target resource.
 
-Now that we understand the role that HTTP plays in web applications, the constraints that REST imposes in network-base APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL [1]  
+Now that you understand the role that HTTP plays in web applications, the constraints that REST imposes in network-based APIs, and the request/response dynamic between client and server, we are now ready to interact with an API. REST constraints demand that the API must be stateless. This means that each request sent by the client to the server must contain all the information the server needs to respond appropriately. As a consequence, everything is contained in the URL [1]  
 
 ## MusicBrainz API  
 
-The MusicBrainz API gives the client access to a wide range of music metadata about artists & their music, including biographical information, release dates, media formats, etc. Requests are in the form of a URL that is comprised of multiple components, some mandatory, some optional. [4] Syntax for the is as follows:
+The MusicBrainz API gives the client access to a wide range of music metadata about artists & their music, including biographical information, release dates, media formats, etc. Requests are in the form of a URL that is comprised of multiple components, some mandatory, some optional. [4] Syntax for the URL is as follows:
 
 `<api_root><entity><mbid><inc><format>`
 
@@ -84,7 +86,7 @@ where:
 
 * \<api_root> is the partial URL to the API: "https://musicbrainz.org/ws/2/"
 * \<entity> is one of multiple categories that include artist, recording, release, etc.
-* \<mbid> is the MusicBrainz identifier the is unique to each target resource in the database.
+* \<mbid> is the MusicBrainz identifier that is unique to each target resource in the database.
 * \<inc> is an optional subquery string
 * \<format> is an optional format string that specifies the transfer format which can be either JSON or XML. If not specified, XML is the default format.
 
@@ -93,7 +95,7 @@ where:
 
 This section shows you one approach to send an HTTP or HTTPS request & retrieve the response. You will see the modules and methods used. The API that we are using is the MusicBrainz API web service. We will use the GET method to retrieve metadata for a single recording to illustrate the process. We will request the response data in JSON format.
 
-There are multiple Python packages available to send HTTP requests and handle responses. Some require install external packages. For the purposes of this exercise, we will use the built-in urllib module [6] that does not require installing an external module.
+There are multiple Python packages available to send HTTP requests and handle responses. Some require external packages to be installed. For the purposes of this exercise, we will use the built-in urllib module [6] that does not require installing an external module.
 
 ### Modules  
 
@@ -137,28 +139,30 @@ jfmt = "?&fmt=json"
 api_url = api_root+entity+mbid+jfmt
 ```
 
-In this example (Figure 2), the `urllib.request.Request(api_url)` method is used to request a resource. Since only argument is `api_url`, the request method defaults to `GET`. A POST request is sent to the server in a similar way, specifying `POST` and/or passing a `data` argument.
+In Figure 2, the `urllib.request.Request(api_url)` method is used to request a resource. Since the only argument is `api_url`, the request method defaults to the `GET` method. A POST request is sent to the server in a similar way, specifying `POST` and/or passing a `data` argument. However, the `POST` method must be explicitly specified. 
 
 ![Figure 2. Python script](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig2-python-script.png)
 Figure 2. Python script  
 
-In Figure 3, we see the response values displayed in the IDLE Shell. window. While there is a lot of information returned in the response, we have selected to display the `type`, `host, and method,` to confirm that the request was sent to the MusicBrainz server, that it sent via secure HTTPS, and the `GET` method was used. 
+In Figure 3, we see the response values displayed in the IDLE Shell window. While there is a lot of information returned in the response, we have selected to display the `type`, `host`, and `method`, to confirm that the request was sent to the MusicBrainz server, that it sent via secure HTTPS, and the `GET` method was used. 
 
 Note that the JSON data is deserialized by the json.loads() method, converted to Python dictionary form, and displayed. Finally, the code value '200' indicates that the request was successfully executed.  
 
 ![Figure 3. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig3-http-music-api-response.png)  
 Figure 3. Server response: JSON data text output
 
-If you prefer viewing the data in a browser, one option is to use the `open_new_tab()` method from the Python built-in module `webbrowser`. The web browser output is shown in Figure 4.   
+If you prefer viewing the data in a browser, one option you can use is the `open_new_tab()` method from the Python built-in module `webbrowser`. The web browser output is shown in Figure 4.   
 
 ![Figure 4. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig4-json-api-to-browser-2.png)  
 Figure 4. Server response: JSON data to browser
 
-**Security**
+## Security  
 
-Web APIs typically require some sort of authentication to verify that the user submitting a request is authorized to do so. Some of the common authentication protocols include HTTP Digest Access Authentication, JSON Web Token (JWT), and OAuth 2. HTTP Digest Access Authentication uses 256 or 512 hash encrypted username and password to authorize access. JWT and OAuth 2 use tokens, generated by a third party authorization server, that you authorize in advance to give you access to one or more applications. The token approach effectively gives you a single sign-on source so you don't have to repeatedly re-enter your username and password.
+Web APIs typically require some sort of authentication to verify that the client submitting a request is authorized to do so. Some of the common authentication protocols include HTTP Digest Access Authentication, JSON Web Token (JWT), and OAuth 2. HTTP Digest Access Authentication uses 256 or 512 hash encrypted username and password to authorize access. JWT and OAuth 2 use tokens, generated by a third party authorization server, that you authorize in advance to give you access to one or more applications. The token approach effectively gives you a single sign-on source so you don't have to give your username and password to the web service since the trusted third party has already authenticated your identity.
 
-MusicBrainz POST requests require authentication for security reasons since data can be altered. In order to submit a POST request, a client application must register using either a username/password or OAuth 2 token. An authorization request must be submitted prior to submitting a POST request. For more information on MusicBrainz authentication, see "Development / OAuth2 - MusicBrainz"[5]. No authentication is required for most GET requests as we demonstrated in the example.
+
+### MusicBrainz security
+MusicBrainz POST requests require authentication for security reasons since data can be altered. In order to submit a POST request, a client application must register using either a username/password or OAuth 2 token. An authorization request must be submitted prior to submitting a POST request. For more information on MusicBrainz authentication, see "Development / OAuth2 - MusicBrainz" [5]. No authentication is required for most GET requests as we demonstrated in the example.
 
 
 ## Summary
