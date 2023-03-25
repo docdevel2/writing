@@ -9,7 +9,7 @@ Many network-based web services offer APIs that comply with the REpresentational
 In this article, you will see how you can access a RESTful API database with Python. We will deconstruct the data sent by the client to the server, and the corresponding response received by the client from the server. To illustrate the mechanics of the process, we will use a Python HTTP module to connect to a RESTful music database API.
 
 
-![Figure 1. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig1-client-server.png)
+![Figure 1. Client-server model](images/fig1-client-server.png)
 Figure 1. Client-server model
 
 ## Why REST?
@@ -62,7 +62,7 @@ server for the purpose of sending one or more HTTP requests. An HTTP server is a
 
 When HTTP was first introduced (1990), the only method used to send requests was the GET method. It has since evolved to include additional methods to allow requests to modify and delete content on the server. Among these other methods are: GET, POST, PUT, and DELETE. You will see how some of these methods are used later when we get to the Python code described in this article. [2]
 
-![Table 1. HTTP Method](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/table1-http-methods.png)
+![Table 1. HTTP Method](images/table1-http-methods.png)
 
 Table 1. HTTP Method
 
@@ -141,19 +141,19 @@ api_url = api_root+entity+mbid+jfmt
 
 In Figure 2, the `urllib.request.Request(api_url)` method is used to request a resource. Since the only argument is `api_url`, the request method defaults to the `GET` method. A POST request is sent to the server in a similar way, specifying `POST` and/or passing a `data` argument. However, the `POST` method must be explicitly specified. 
 
-![Figure 2. Python script](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig2-python-script.png)
+![Figure 2. Python script](images/fig2-python-script.png)
 Figure 2. Python script  
 
 In Figure 3, we see the response values displayed in the IDLE Shell window. While there is a lot of information returned in the response, we have selected to display the `type`, `host`, and `method`, to confirm that the request was sent to the MusicBrainz server, that it sent via secure HTTPS, and the `GET` method was used. 
 
 Note that the JSON data is deserialized by the json.loads() method, converted to Python dictionary form, and displayed. Finally, the code value '200' indicates that the request was successfully executed.  
 
-![Figure 3. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig3-http-music-api-response.png)  
+![Figure 3. Client-server model](images/fig3-http-music-api-response.png)  
 Figure 3. Server response: JSON data text output
 
 If you prefer viewing the data in a browser, one option you can use is the `open_new_tab()` method from the Python built-in module `webbrowser`. The web browser output is shown in Figure 4.   
 
-![Figure 4. Client-server model](/home/docdevel/Documents/Writing-Tech/Articles/Music-API/images/fig4-json-api-to-browser-2.png)  
+![Figure 4. Client-server model](images/fig4-json-api-to-browser-2.png)  
 Figure 4. Server response: JSON data to browser
 
 ## Security  
