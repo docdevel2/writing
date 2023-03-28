@@ -1,10 +1,10 @@
-# Music Database REST APIs
+# Look Inside a RESTful Music Database API
 
 ## Overview
 
 If you are a developer who wants to integrate network-based services into your applications, an application programming interface (API) is a frequently used solution. An API allows your client application to interact with a server using a common interface. (Figure 1) Network-base APIs are becoming increasingly popular for web applications in industries such as banking, e-commerce, internet of things (IoT), and music.  
 
-Many network-based web services offer APIs that comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints that I will explain later in this article. APIs that comply with REST constraints are called RESTful. REST APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
+Many network-based web services offer APIs that comply with the REpresentational State Transfer (REST) design style which is defined by a set of constraints that I will explain later in this article. APIs that comply with REST constraints are called RESTful. RESTful APIs operate in two modes, request and response. The client sends a request to the server for data, and the server responds with a status code, and if appropriate, the requested data.
 
 In this article, you will see how you can access a RESTful API database with Python. We will deconstruct the data sent by the client to the server, and the corresponding response received by the client from the server. To illustrate the mechanics of the process, we will use a Python HTTP module to connect to a RESTful music database API.
 
@@ -16,7 +16,7 @@ Figure 1. Client-server model
 
 A RESTful API allows the client to retrieve data from the server without the need to know details about the server back-end implementation. There is no need for the client to know which server or database management software is being used. In addition, the API enhances security by restricting who can access data and selectively restricting which data can be accessed.
 
-In a RESTful web service, requests made to a resource's URI elicit a response with a payload formatted in HTML, XML, JSON, or some other format. The most common protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
+In a RESTful web service, requests made to a resource's URI elicit a response with a payload usually formatted in HTML, XML, or JSON. The most common data transfer protocol for these requests and responses is HTTP, which provides operations (HTTP methods) such as GET, POST, PUT, PATCH and DELETE.
 
 The following is a list of the REST interface constraints [1]: 
  
@@ -27,7 +27,7 @@ The following is a list of the REST interface constraints [1]:
 
 ## Component isolation
 
-An API isolates the client from the server, allowing communication through a uniform interface. This facilitates your development and debug process by giving you better visibility into network components. As a result, implementation changes on either client-side or server-side can be made without either affecting the other, as long as the interface protocol is followed. [1]
+An API isolates the client from the server, allowing communication through a uniform interface. This facilitates your development and debug process by giving you better visibility into network components. As a result, implementation changes on either client-side or server-side can be made without either one affecting the other, as long as the interface protocol is followed. [1]
 
 A RESTful API benefits developers because it allows developers to connect client components to a server through a uniform interface. This allows replaceable components to be swapped without changing code on either side of the interface. As an analogy, consider USB devices that connect to a computer. Multiple USB devices, with the same or different functions, can connect to the same USB port and still function properly.
 
@@ -39,7 +39,7 @@ From an end user perspective, you can use your existing browser as a client to a
 
 ## Music APIs
 
-Several well known music services provide REST API database access to musicians and to partners who want to integrate their content and/or music into commercial products. 
+Several well known music services provide RESTful API database access to musicians and to partners who want to integrate their content and/or music into commercial products. 
 
 Spotify for example, provides an API that allows hardware partners to develop applications for home audio systems, music players, headphones, and other internet-enabled devices. 
 
