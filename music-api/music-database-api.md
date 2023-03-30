@@ -60,9 +60,9 @@ server for the purpose of sending one or more HTTP requests. An HTTP server is a
 
 When HTTP was first introduced, the only method used to send requests was the GET method. It has since evolved to include additional methods to allow requests to modify and delete content on the server. Among the methods currently used are: GET, POST, PUT, and DELETE. You will see how some of these methods are used later when we get to the Python code described in this article. 
 
-![Table 1. HTTP Method](images/table1-http-methods.png)
+![Table 1. HTTP Methods](images/table1-http-methods.png)
 
-Table 1. HTTP Method
+Table 1. HTTP Methods
 
 ### Requests 
    
