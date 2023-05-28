@@ -1,0 +1,5 @@
+Method	Action
+GET	Asks the server to send the target resource based on an identifier (representation).
+POST	Asks the server to have the target resource process the enclosed content specified by an identifier.
+PUT	Asks the server to have the target resource create or replace the enclosed content specified by an identifier.
+DELETE	Asks the server to have the target resource specified by an identifier to be deleted.
