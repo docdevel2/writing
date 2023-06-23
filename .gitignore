@@ -1,2 +1,4 @@
-# .gitignore file
+# File name: .gitignore
+
 *.backup
+untracked
