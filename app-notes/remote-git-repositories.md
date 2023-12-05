@@ -51,6 +51,27 @@ Staging command: git add \<file> ...
 To begin tracking a new file, you use the command  
 `$ git add`
 
+## Merging via command line  
+(From GitHub session on publ branch of jcportfolio main branch.)  
+
+If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.  
+
+Step 1: Clone the repository or update your local repository with the latest changes.  
+
+git pull origin main  
+
+Step 2: Switch to the base branch of the pull request.  
+
+git checkout main  
+
+Step 3: Merge the head branch into the base branch.  
+
+git merge publ-branch  
+
+Step 4: Push the changes.  
+
+git push -u origin main  
+
 ## References  
 
 [1] [Scott Chacon & Ben Straub, *Pro Git*, sec. 2.5, Working with Remotes]([1]: https://www.git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)
