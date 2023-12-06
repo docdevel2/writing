@@ -7,9 +7,11 @@ date: 2023-01-01
 ## Abstract  
 In this article, I show you how I used a Python application programming interface (API) to migrate my music library from a SQL relational database to a NoSQL document database. Using the Python X DevAPI in the MySQL Shell application, I highlight some basics about document databases, the Python methods used, and the database tool that enables migration. Readers who should get the most out of this article are those that have some basic familiarity with the structured query language (SQL) and with the Python programming language.
 
-Keywords: MySQL, X DevAPI, Python, SQL, NoSQL, database
+Keywords: MySQL, X DevAPI, Python, SQL, NoSQL, database  
 
-[View or download PDF: SQL Database Migration](https://docdevel2.github.io/jcportfolio/Tutorial_SQL_To_Doc_DB.pdf)
+Linux Magazine, Issue 266, January, 2023  
+
+[View or download PDF](https://docdevel2.github.io/jcportfolio/Tutorial_SQL_To_Doc_DB.pdf)
 
 Published: 2023
 
@@ -24,7 +26,7 @@ As businesses rapidly embrace network-based applications, APIs have become a key
 
 Keywords: REST API, CRM, HubSpot CRM, Network-base API, Python  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/REST-APIs-Drive-Business-Tools.pdf)  
+[View or download PDF](https://docdevel2.github.io/jcportfolio/REST-APIs-Drive-Business-Tools.pdf)  
 
 Published: 2023  
 
@@ -39,7 +41,7 @@ This article explores the early beginnings of the relational database language S
 
 Keywords: Relational database, RDBMS, SQL, SEQUEL, Edgar F. Codd, Donald D. Chamberlin, Raymond F. Boyce  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/Predicate-Logic-The-Magic-Roots-of-RDBMS.pdf)  
+[View or download PDF](https://docdevel2.github.io/jcportfolio/Predicate-Logic-The-Magic-Roots-of-RDBMS.pdf)  
 
 Published: 2023  
 
@@ -54,7 +56,9 @@ If you are a developer who wants to integrate network-based services into your a
 
 Keywords: REST API, Music API, Music database, Network-base API, Python  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/Music_Database_API.pdf)  
+Linux Magazine, Issue 276, November, 2023
+
+[View or download PDF](https://docdevel2.github.io/jcportfolio/Music_Database_API.pdf)  
 
 Published: 2023  
 
@@ -72,7 +76,7 @@ TBD
 
 Keywords: TBD  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/TBD.pdf)
+[View or download PDF](https://docdevel2.github.io/jcportfolio/TBD.pdf)
 
 Published: 
 
