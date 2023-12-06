@@ -8,7 +8,7 @@ This article explores the early beginnings of the relational database language S
 
 Keywords: Relational database, RDBMS, SQL, SEQUEL, Edgar F. Codd, Donald D. Chamberlin, Raymond F. Boyce  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/Predicate-Logic-The-Magic-Roots-of-RDBMS.pdf)  
+[View or download PDF: Predicate Logic — The Magic Roots of Relational Database Management Systems](https://docdevel2.github.io/jcportfolio/Predicate-Logic-The-Magic-Roots-of-RDBMS.pdf)  
 
 Published: 2023  
 

@@ -8,7 +8,7 @@ As businesses rapidly embrace network-based applications, APIs have become a key
 
 Keywords: REST API, CRM, HubSpot CRM, Network-base API, Python  
 
-[View or download PDF: TBD](https://docdevel2.github.io/jcportfolio/REST-APIs-Drive-Business-Tools.pdf)  
+[View or download PDF: REST APIs Drive Business Tools](https://docdevel2.github.io/jcportfolio/REST-APIs-Drive-Business-Tools.pdf)  
 
 Published: 2023  
 
