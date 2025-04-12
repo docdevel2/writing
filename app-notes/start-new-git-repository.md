@@ -1,18 +1,23 @@
-# Start a new git repository
-## Install on Linux
-* apt install git 
+# Start a new git repository  
+## Install on Linux  
 
-## Initialize project
+* apt install git  
+
+## Initialize project  
+
 Your first instinct, when you start to do something new, should be git init. You’re starting to write a new paper, you’re writing a bit of code to do a computer simulation, you’re mucking around with some new data … /anything/: think git init.
 
-## A new repo from scratch
-Say you’ve just got some data from a collaborator and are about to start exploring it.
-	* 	Create a directory to contain the project.
-	* 	Go into the new directory.
-	* 	Type git init.
-	* 	Write some code.
-	* 	Type git add to add the files (see the  [typical use page](https://kbroman.org/github_tutorial/pages/routine.html) ).
-	* 	Type git commit.
+## A new repo from scratch  
+
+Say you’ve just got some data from a collaborator and are about to start exploring it.  
+
+* 	Create a directory to contain the project.
+* 	Go into the new directory.
+* 	Type git init.
+* 	Write some code.
+* 	Type git add to add the files (see the  [typical use page](https://kbroman.org/github_tutorial/pages/routine.html) ).
+* 	Type git commit.
+
 The first file to create (and add and commit) is probably a ReadMe file, either as plain text or with  [Markdown](https://daringfireball.net/projects/markdown/) , describing the project.
 Markdown allows you to add a bit of text markup, like  [hyperlinks](https://en.wikipedia.org/wiki/Hyperlink) , *bold*//italics/, or to indicate code with a monospace font. Markdown is easily converted to html for viewing in a web browser, and GitHub will do this for you automatically.
 
@@ -80,5 +85,6 @@ git status
 git config --global user.email "jcofield2.0@gmail.com"
 git config --global user.name "docdevel2"
 (Retrieve existing repository)
-git clone https://github.com/docdevel2/writing
+git clone git clone git@github.com:docdevel2/writing.git 
+	(Note: Use SSH link from CODE dropdown menu.)
 ```

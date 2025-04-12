@@ -195,7 +195,7 @@ MusicBrainz POST requests require a authentication for security reasons since da
 3. [URI RFC 2396](https://www.ietf.org/rfc/rfc2396.txt)
 4. [MusicBrainz FAQ](https://musicbrainz.org/doc/MusicBrainz_API#General_FAQ)
 5. [Development / OAuth2 - MusicBrainz](https://musicbrainz.org/doc/Development/OAuth2)
-6. [Guido van Rossum and the Python development team, *The Python Library Reference*, Release 3.10.5, July 21, 2022](https://docs.python.org/3.10/library/urllib.html)
+6. [Python Software Foundation, *The Python Library Reference*, Release 3.10.5, July 21, 2022](https://docs.python.org/3.10/library/urllib.html)
 
 
 ## Research Notes
