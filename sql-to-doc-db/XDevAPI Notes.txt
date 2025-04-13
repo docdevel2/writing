@@ -1,0 +1,330 @@
+# SQL history
+
+* First introduced: 1974 as SQUARE (Specifying Queries in A Relational Environment); 48 years ago
+
+* After 1974, the developers worked on a sequel to SQUARE. The name SEQUEL was changed to SQL (dropping the vowels) because "SEQUEL" was a trademark of the UK-based Hawker Siddeley Dynamics Engineering Limited company. The label SQL later became the acronym for Structured Query Language. 
+
+* Originally developed by: Donald D. Chamberlin & Raymond F. Boyce at IBM
+
+* 1986: SQL became a standard of the American National Standards Institute (ANSI) 
+
+* 1987: SQL became a standard of the International Organization for Standardization (ISO) 
+
+
+# NoSQL history 
+
+* The term NoSQL was used by Carlo Strozzi in 1998 to name his lightweight Strozzi NoSQL open-source relational database that did not expose the standard Structured Query Language (SQL) interface, but was still relational. His NoSQL RDBMS is distinct from the around-2009 general concept of NoSQL databases.
+
+* The central concept of a document store is that of a "document". Based on key-value data model.
+
+# Python statements
+* Login default
+import sys
+from custompy  import config
+cfg = config.DEFAULT
+
+* Connection-xconnection()
+def xconnection():
+    #This function tests MySQL Shell API
+    #
+    print ( "Running function xconn \n" )
+    #
+    my_session = mysqlx.get_session( cfg["pwd"] )
+    #
+    print ( "Connecting to mysqlx via xconn()" )
+    #
+    return my_session
+    #
+
+
+# Common MySQL Statements #
+
+* CONNECT(CLI command)
+	
+* UPDATE 
+UPDATE divatb1 SET Artist='Art4', Album='Alb20' WHERE Artist='Art5';
+	
+* INSERT VALUES
+INSERT INTO `divatb1` VALUES ('Art1', 'Alb30');
+INSERT INTO tbl_nm (col1,col2,...) VALUES (val1,val2,...);
+	
+* SOURCE # Execute a set of SQL statements interactively within MySQL from an external file.
+\source C:/Users/Docdevel/Documents/cgi/hello.py
+
+* CREATE DATABASE
+CREATE DATABASE dbname;
+
+* SELECT DATABASE
+USE dbname; Selects database "dbname"
+
+* CREATE TABLE 
+CREATE TABLE music2 ( Artist VARCHAR(30), Album VARCHAR(30), Tracks CHAR(2), Released CHAR(4), Genre CHAR(8) ); 
+
+* SELECT TABLE 
+SELECT * FROM music2; Shows specified table and all table.
+SELECT * FROM musict3 WHERE Artist LIKE '%$artistname%';
+
+#
+# SQL/API equivalents
+#
+
+* CONNECT
+SQL: (CLI) or connect(user='myname', password='mypassword', host='127.0.0.1', database='dbname')
+API: mysqlx.get_session
+
+* LIST DATABASES
+SQL: SHOW DATABASES;
+API: get_schemas
+
+* CREATE DATABASE 
+SQL: CREATE DATABASE dbname;
+API: CREATE DATABASE dbname;
+
+* SELECT DATABASE
+SQL: USE dbname;
+API: get_schema('dbname')
+
+* CREATE TABLE/COLLECTION
+SQL: CREATE TABLE table_name (col1,col2,...);
+API: create_collection('collection_name') +  create_index(index_name, field_description)
+
+* SELECT TABLE/COLLECTION
+SQL: SELECT * FROM table_name;
+API: find()
+
+* INSERT TABLE ROW(S)/ADD DOCUMENT KEY(S)/VALUE(S)
+SQL: INSERT INTO tbl_nm (col1,col2,...) VALUES (val1,val2,...);
+API: add( [ {doc1 key:value pairs}, {doc2 key:value pairs}, ...] )
+
+* DELETE ROW FROM TABLE/DOCUMENT FROM COLLECTION
+SQL: DELETE FROM table_name WHERE condition;
+API: remove(condition)
+
+* UPDATE TABLE ROW(S)/ADD OR REMOVE DOCUMENT
+SQL: UPDATE table_name SET Col1='Value1', Col2='Value2' WHERE condition;
+API: modify(condition)
+
+* DELETE TABLE
+SQL: DROP TABLE table_name;
+API: drop_collection('collection_name')
+
+#
+# NoSQL vs SQL (Source: mongodb.com)
+
+> Pro: NoSQL databases have flexible data models, scale horizontally,
+have incredibly fast queries, and are easy for developers to work
+with.
+
+> Pro: A flexible schema allows you to easily make changes to your database as
+requirements change. You can iterate quickly and continuously
+integrate new application features to provide value to your users
+faster.
+
+> Pro: Some NoSQL databases like MongoDB map their data structures
+to those of popular programming languages. This mapping allows
+developers to store their data in the same way that they use it in
+their application code. While it may seem like a trivial advantage,
+this mapping can allow developers to write less code, leading to
+faster development time and fewer bugs.
+
+> Con: Since data models in NoSQL databases are typically optimized for
+queries and not for reducing data duplication, NoSQL databases
+can be larger than SQL databases.
+
+#
+# Document Databases (Source: mongodb.com)
+
+> Document databases are considered to be non-relational (or
+NoSQL) databases. Instead of storing data in fixed rows and
+columns, document databases use flexible documents.
+
+> A document is a record in a document database. A document
+typically stores information about one object and any of its related
+metadata.
+
+> Documents store data in field-value pairs. The values can be a
+variety of types and structures, including strings, numbers, dates,
+arrays, or objects. Documents can be stored in formats like JSON,
+BSON, and XML.
+
+> A collection is a group of documents. Collections typically store
+documents that have similar contents. Not all documents in a collection are required to have the same
+fields, because document databases have a flexible schema.
+
+> Documents map to objects in most popular programming
+languages, which allows developers to rapidly develop their
+applications.
+
+> Document databases have a flexible schema,
+meaning that not all documents in a collection need to have the
+same fields.
+
+> Document databases have an API or query language that allows developers
+to execute the CRUD operations on the database.
+
+> JSON has become an established standard for data interchange and storage. JSON
+documents are lightweight, language-independent, and humanreadable.
+
+> A document’s schema is
+dynamic and self-describing, so developers don’t need to first predefine
+it in the database. Fields can vary from document to
+document.
+
+#
+# MySQL Document Store
+
+> MySQL Document Store allows developers to work with SQL
+relational tables and schema-less JSON collections.
+
+> MySQL Document store gives users maximum flexibility
+developing traditional SQL relational applications and NoSQL
+schema-free document database applications. This eliminates the
+need for a separate NoSQL document database. Developers can
+mix and match relational data and JSON documents in the same
+database as well as the same application. For example, both data
+models can be queried in the same application and results can be
+in table, tabular or JSON formats.
+
+> X DevAPI - The X DevAPI (introduced in MySQL 8.0) is a new, modern, async developer API for CRUD and SQL operations on top of X Protocol. It introduces
+Collections as new Schema objects. Documents are stored in
+Collections and have their dedicated CRUD operation set. X DevAPI supports relational tables and JSON documents
+
+#
+# Mongo vs. MySQL (Source: IBM)
+
+> Mongo is object-based, MySQL is table-based.
+
+> MySQL as a more rigid architecture and not as flexible for reformatting data structures
+
+> MySQL is a legacy table-structured
+system, whereas MongoDB is a document-based system
+
+#
+# Python and MongoDB (Source: Real Python)
+
+> Data model: SQL is relational, NoSQL is non-relational
+
+> Structure: SQL is table-based, NoSQL is document-based, key-value pairs
+
+> Schema: SQL table fields (columns) are predefined and fixed, NoSQL documents can have different structure in one collection
+
+> Schemaless means that you can have
+documents with a different set of fields in the same collection,
+without the need for satisfying a rigid table schema.
+
+> You can change the schema of the database
+on the fly, which reduces the time needed to provide new features
+or fix existing problems.
+
+> Just like relational databases need a primary key to uniquely
+identify every row in a table, MongoDB documents need to have
+an _id field that uniquely identifies the document. MongoDB
+allows you to enter a custom _id as long as you guarantee its
+uniqueness. However, a widely accepted practice is to allow
+MongoDB to automatically insert an _id for you.
+
+> MongoDB provides an official
+Python driver called PyMongo.
+
+> In Python, you use dictionaries to
+create documents
+
+> Once you’ve created the document as a dictionary, you need to
+specify which collection you want to use.
+
+> You can insert documents into tutorial by calling
+.insert_one()
+
+> If you have many documents to add to the database, then you can
+use .insert_many() to insert them in one go
+
+> PyMongo also provides methods to replace, update, and delete
+documents from a database.
+
+> To retrieve documents from a collection, you can use .find().
+Without arguments, .find() returns a Cursor object that yields
+the documents in the collection on demand
+
+> MongoEngine is an object-document mapper
+(ODM), which is roughly equivalent to an SQL-based object-relational
+mapper (ORM). MongoEngine provides a class-based
+abstraction, so all the models you create are classes.
+
+#
+# Additional notes
+
+> ALTER TABLE statement is used to add, delete, or modify columns in an existing table
+
+> All rows in a table will have the same columns
+
+> Indexes are optional: (Source: XDevAPI) To make large collections of documents more efficient to navigate you can create an index based on one or more fields found in the documents in the collection. This section describes how to index a collection.
+
+#
+# Terminology
+> CRUD: Create, Read, Update, Delete
+
+> Data models: SQL is relational, NoSQL is non-relational
+
+> Document-based
+
+> Key-value pairs (check JSON & Python documentation)
+
+> JSON: “name/value pair”
+
+> Python: “key:value pair”
+
+> Mapping: NoSQL objects map to OOP objects (like Python)
+
+> MySQL Document Store allows developers to work with SQL relational tables and schema-less JSON collections.
+
+> NoSQL database: schema-less, allows mixed field types
+
+> Object-based, object-oriented (NoSQL)
+
+> Schema
+>> Schema-less database, flexible schema
+
+> SQL database: structured, table-based, same fields for all rows
+
+> Table-based
+
+> X DevAPI: MySQL Connector/Python provides a client library for the X DevAPI protocol that was introduced in MySQL 8.0
+
+#
+# Study references
+[Ref 4, p.1 Supported Languages]
+[Ref 4, p.1 Supported APIs]
+[Ref 4, p.3 Global Session]
+[Ref 4, p.15 MySQL Shell Sessions]
+[Ref 1, p.3 “config.py” for security]
+[Ref 1, p.3-4 Guidelines for Python Developers]
+[Ref 1, p.13 Connecting to MySQL Using Connector/Python]
+[Ref 2, p.420 Chapter 6.5 MySQL Connector/Python Coding
+Examples]
+[Ref 4, p.34-37, Ch. 4.4-4.5 Password configuration] *Note:
+This may be a separate future project.*
+[Ref 3, p.]
+[Ref #, p.]
+[Ref #, p.]
+[Ref #, p.]
+[Ref #, p.]
+
+# References
+1-MySQL-connectors-Python [MySQL Connector/Python
+Developer Guide] (Acrobat)
+2-MySQL-connectors [Connectors and APIs] (Acrobat)
+3-MySQL-shell-Python-x-devapi-userguide [X DevAPI User
+Guide for MySQL Shell in Python Mode] (Acrobat)
+4-MySQL-Shell-8.0 [MySQL Shell 8.0] (Acrobat)
+5-Python Database API Specification v2.0 (PEP 249)
+(https://peps.python.org/pep-0249/)
+6-psycopg (URL)
+7-DB-API (URL)
+8-PyMySQL (URL)
+9-Python Wiki/Database Programming (URL)
+10-Python Wiki/Db API FAQ (URL)
+11-Noviceʼs Guide to the Python 3 DB-API
+(https://philvarner.github.io/pages/novice-python3-dbapi.html)
+
+
+###

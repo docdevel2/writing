@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Date</key><date>2019-09-06T20:17:54Z</date>
+	<key>Application Version</key><string>12.9.6.3</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>E28405344F84941D</string>
+	<key>Tracks</key>
+	<dict>
+		<key>451</key>
+		<dict>
+			<key>Track ID</key><integer>451</integer>
+			<key>Name</key><string>Got 'Til It's Gone</string>
+			<key>Artist</key><string>Janet Jackson Feat. Q-Tip &#38; Joni Mitchell</string>
+			<key>Album Artist</key><string>Janet Jackson </string>
+			<key>Composer</key><string>Terry Lewis/Rene Elizondo Jr./Joni Mitchell/Janet Jackson/Kamaal Ibn Fareed/James Harris III</string>
+			<key>Album</key><string>Velvet Rope</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4840222</integer>
+			<key>Total Time</key><integer>241893</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>22</integer>
+			<key>Year</key><integer>1997</integer>
+			<key>Date Modified</key><date>2019-08-10T16:15:14Z</date>
+			<key>Date Added</key><date>2017-03-01T05:17:24Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>4</integer>
+			<key>Play Date</key><integer>3649620196</integer>
+			<key>Play Date UTC</key><date>2019-08-26T06:23:16Z</date>
+			<key>Normalization</key><integer>1664</integer>
+			<key>Sort Album Artist</key><string>Janet Jackson </string>
+			<key>Persistent ID</key><string>5A0DE0F1CCE67670</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Janet%20Jackson/Velvet%20Rope/04%20Got%20'Til%20It's%20Gone.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>531</key>
+		<dict>
+			<key>Track ID</key><integer>531</integer>
+			<key>Name</key><string>Where My Girls At</string>
+			<key>Artist</key><string>702</string>
+			<key>Album Artist</key><string>702</string>
+			<key>Composer</key><string>Eric Seats/Missy Elliott/R. Stewart</string>
+			<key>Album</key><string>702</string>
+			<key>Genre</key><string>Urban Crossover</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3339016</integer>
+			<key>Total Time</key><integer>166739</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Year</key><integer>1999</integer>
+			<key>Date Modified</key><date>2008-02-07T23:58:28Z</date>
+			<key>Date Added</key><date>2017-03-13T02:27:46Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>16</integer>
+			<key>Play Date</key><integer>3649616780</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:26:20Z</date>
+			<key>Persistent ID</key><string>D7E097816E4B9199</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/702/702/1-02%20Where%20My%20Girls%20At.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>657</key>
+		<dict>
+			<key>Track ID</key><integer>657</integer>
+			<key>Name</key><string>No One Will Do</string>
+			<key>Artist</key><string>Mary J. Blige</string>
+			<key>Album Artist</key><string>Mary J. Blige</string>
+			<key>Composer</key><string>Brown, Clifford L. III/Bunny Sigler/Dave Young/Erik Oritz/Kevin Crowe</string>
+			<key>Album</key><string>Breakthrough, The</string>
+			<key>Genre</key><string>General RandB</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5767702</integer>
+			<key>Total Time</key><integer>286563</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2005</integer>
+			<key>Date Modified</key><date>2019-06-28T01:00:04Z</date>
+			<key>Date Added</key><date>2017-03-13T02:34:38Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>41</integer>
+			<key>Play Date</key><integer>3649619267</integer>
+			<key>Play Date UTC</key><date>2019-08-26T06:07:47Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>C1BE9D31274FDF7D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Mary%20J.%20Blige/Breakthrough,%20The/1-01%20No%20One%20Will%20Do.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>659</key>
+		<dict>
+			<key>Track ID</key><integer>659</integer>
+			<key>Name</key><string>Be Without You</string>
+			<key>Artist</key><string>Mary J. Blige</string>
+			<key>Album Artist</key><string>Mary J. Blige</string>
+			<key>Composer</key><string>Bryan-Michael Cox/Jason Perry/Johnta Austin/Mary J. Blige</string>
+			<key>Album</key><string>Breakthrough, The</string>
+			<key>Genre</key><string>General RandB</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4964332</integer>
+			<key>Total Time</key><integer>246360</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>2005</integer>
+			<key>Date Modified</key><date>2019-06-28T01:00:04Z</date>
+			<key>Date Added</key><date>2017-03-13T02:34:38Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>40</integer>
+			<key>Play Date</key><integer>3649618980</integer>
+			<key>Play Date UTC</key><date>2019-08-26T06:03:00Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>4F7BC0BE281155F6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Mary%20J.%20Blige/Breakthrough,%20The/1-04%20Be%20Without%20You.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>665</key>
+		<dict>
+			<key>Track ID</key><integer>665</integer>
+			<key>Name</key><string>MJB Da MVP</string>
+			<key>Artist</key><string>Mary J. Blige</string>
+			<key>Album Artist</key><string>Mary J. Blige</string>
+			<key>Composer</key><string>Allan Felder/Andre Lyon/Curtis Jackson/Hame Johnson/Jayceon Taylor/Marcello Valenzano/Norman Harris/Ron Baker</string>
+			<key>Album</key><string>Breakthrough, The</string>
+			<key>Genre</key><string>General RandB</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5061473</integer>
+			<key>Total Time</key><integer>251219</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Year</key><integer>2005</integer>
+			<key>Date Modified</key><date>2019-06-28T01:00:08Z</date>
+			<key>Date Added</key><date>2017-03-13T02:34:38Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>127</integer>
+			<key>Play Date</key><integer>3650265784</integer>
+			<key>Play Date UTC</key><date>2019-09-02T17:43:04Z</date>
+			<key>Loved</key><true/>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>7BBAC2190340ABBD</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Mary%20J.%20Blige/Breakthrough,%20The/1-10%20MJB%20Da%20MVP.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>745</key>
+		<dict>
+			<key>Track ID</key><integer>745</integer>
+			<key>Name</key><string>Go Deep</string>
+			<key>Artist</key><string>Janet Jackson</string>
+			<key>Composer</key><string>Rene Elizondo Jr./Janet Jackson/James Harris III/Terry Lewis</string>
+			<key>Album</key><string>Velvet Rope</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5645768</integer>
+			<key>Total Time</key><integer>282174</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Track Count</key><integer>22</integer>
+			<key>Year</key><integer>1998</integer>
+			<key>Date Modified</key><date>2011-02-12T19:35:10Z</date>
+			<key>Date Added</key><date>2017-03-13T08:06:59Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>13</integer>
+			<key>Play Date</key><integer>3649619955</integer>
+			<key>Play Date UTC</key><date>2019-08-26T06:19:15Z</date>
+			<key>Normalization</key><integer>3666</integer>
+			<key>Persistent ID</key><string>B1D7112543E10843</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Janet%20Jackson/Velvet%20Rope/08%20Go%20Deep.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>757</key>
+		<dict>
+			<key>Track ID</key><integer>757</integer>
+			<key>Name</key><string>What About</string>
+			<key>Artist</key><string>Janet Jackson</string>
+			<key>Composer</key><string>Terry Lewis/Janet Jackson/Rene Elizondo Jr./James Harris III</string>
+			<key>Album</key><string>Velvet Rope</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>5290506</integer>
+			<key>Total Time</key><integer>264411</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>15</integer>
+			<key>Track Count</key><integer>22</integer>
+			<key>Year</key><integer>1997</integer>
+			<key>Date Modified</key><date>2011-02-12T19:37:08Z</date>
+			<key>Date Added</key><date>2017-03-13T08:06:59Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>10</integer>
+			<key>Play Date</key><integer>3649618520</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:55:20Z</date>
+			<key>Normalization</key><integer>4751</integer>
+			<key>Persistent ID</key><string>C85C6AFA0D1DD062</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Janet%20Jackson/Velvet%20Rope/15%20What%20About.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1349</key>
+		<dict>
+			<key>Track ID</key><integer>1349</integer>
+			<key>Name</key><string>Milkshake</string>
+			<key>Artist</key><string>Kelis</string>
+			<key>Album</key><string>Milkshake</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>5993160</integer>
+			<key>Total Time</key><integer>182693</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>2</integer>
+			<key>Date Modified</key><date>2017-09-18T06:12:52Z</date>
+			<key>Date Added</key><date>2017-09-17T06:51:30Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>6</integer>
+			<key>Play Date</key><integer>3649616421</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:20:21Z</date>
+			<key>Normalization</key><integer>3330</integer>
+			<key>Persistent ID</key><string>248B516CC4CEABEE</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Kelis/Milkshake/01%20Milkshake.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1351</key>
+		<dict>
+			<key>Track ID</key><integer>1351</integer>
+			<key>Name</key><string>Get the Party Started</string>
+			<key>Artist</key><string>Pink</string>
+			<key>Album</key><string>MiSsundaztood</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>6346998</integer>
+			<key>Total Time</key><integer>191746</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Date Modified</key><date>2017-09-18T06:35:20Z</date>
+			<key>Date Added</key><date>2017-09-17T06:52:19Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3649616613</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:23:33Z</date>
+			<key>Normalization</key><integer>6369</integer>
+			<key>Persistent ID</key><string>9D3443E04EA29DA6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Pink/MiSsundaztood/02%20Get%20the%20Party%20Started.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1357</key>
+		<dict>
+			<key>Track ID</key><integer>1357</integer>
+			<key>Name</key><string>Closer</string>
+			<key>Artist</key><string>Goapele</string>
+			<key>Album</key><string>Even Closer</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>7542690</integer>
+			<key>Total Time</key><integer>228946</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Date Modified</key><date>2017-09-17T20:03:20Z</date>
+			<key>Date Added</key><date>2017-09-17T06:59:24Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>4</integer>
+			<key>Play Date</key><integer>3649620642</integer>
+			<key>Play Date UTC</key><date>2019-08-26T06:30:42Z</date>
+			<key>Normalization</key><integer>2328</integer>
+			<key>Persistent ID</key><string>96359012D4C4912C</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Goapele/Even%20Closer/09%20Closer.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1419</key>
+		<dict>
+			<key>Track ID</key><integer>1419</integer>
+			<key>Name</key><string>Work It</string>
+			<key>Artist</key><string>Missy Elliott</string>
+			<key>Album Artist</key><string>Missy Elliott</string>
+			<key>Composer</key><string>Missy Elliott, C. Jackson, M. Elliott &#38; T Mosley</string>
+			<key>Album</key><string>Under Construction</string>
+			<key>Genre</key><string>Hip-Hop/Rap</string>
+			<key>Kind</key><string>Purchased AAC audio file</string>
+			<key>Size</key><integer>9290532</integer>
+			<key>Total Time</key><integer>261960</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>14</integer>
+			<key>Year</key><integer>2002</integer>
+			<key>Date Modified</key><date>2019-06-27T01:02:08Z</date>
+			<key>Date Added</key><date>2019-06-27T01:01:36Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>31</integer>
+			<key>Play Date</key><integer>3649615684</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:08:04Z</date>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2019-08-10T14:51:08Z</date>
+			<key>Release Date</key><date>2002-09-09T07:00:00Z</date>
+			<key>Normalization</key><integer>2510</integer>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Sort Album</key><string>Under Construction</string>
+			<key>Sort Artist</key><string>Missy Elliott</string>
+			<key>Sort Name</key><string>Work It</string>
+			<key>Persistent ID</key><string>32AC7C772573B450</string>
+			<key>Explicit</key><true/>
+			<key>Track Type</key><string>File</string>
+			<key>Purchased</key><true/>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Missy%20Elliott/Under%20Construction/04%20Work%20It.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1449</key>
+		<dict>
+			<key>Track ID</key><integer>1449</integer>
+			<key>Name</key><string>Goodies</string>
+			<key>Artist</key><string>Ciara</string>
+			<key>Composer</key><string>Ciara</string>
+			<key>Album</key><string>Goodies</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>3590940</integer>
+			<key>Total Time</key><integer>223000</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>13</integer>
+			<key>Year</key><integer>2004</integer>
+			<key>Date Modified</key><date>2019-07-30T06:59:14Z</date>
+			<key>Date Added</key><date>2019-08-13T23:32:24Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3649615422</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:03:42Z</date>
+			<key>Normalization</key><integer>2926</integer>
+			<key>Sort Artist</key><string>Ciara</string>
+			<key>Sort Composer</key><string>Ciara</string>
+			<key>Persistent ID</key><string>0CC39C1CF4657B8D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Ciara/Goodies/01%20Goodies.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1479</key>
+		<dict>
+			<key>Track ID</key><integer>1479</integer>
+			<key>Name</key><string>Lyrics 2 The Rhythm</string>
+			<key>Artist</key><string>Essence</string>
+			<key>Composer</key><string>Cassandra Mills/Doug mcHenry/George Jackson</string>
+			<key>Album</key><string>New Jack City: Muisic From The Motion Picture</string>
+			<key>Genre</key><string>Soundtrack</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>8193632</integer>
+			<key>Total Time</key><integer>247040</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>11</integer>
+			<key>Year</key><integer>1991</integer>
+			<key>Date Modified</key><date>2019-06-27T23:42:54Z</date>
+			<key>Date Added</key><date>2019-08-13T23:32:24Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3649617028</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:30:28Z</date>
+			<key>Normalization</key><integer>1214</integer>
+			<key>Compilation</key><true/>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Persistent ID</key><string>DFD4D79AC89B245D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Compilations/New%20Jack%20City_%20Muisic%20From%20The%20Motion%20Pi/09%20Lyrics%202%20The%20Rhythm.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1643</key>
+		<dict>
+			<key>Track ID</key><integer>1643</integer>
+			<key>Name</key><string>Fighting Temptation</string>
+			<key>Artist</key><string>Beyoncé Knowles/Free/MC Lyte/Missy Elliott</string>
+			<key>Album Artist</key><string>Soundtrack</string>
+			<key>Composer</key><string>Gene Pistilli/Jonathan Burks/Karriem Mack/Lana Moorer/LaShaun Owens/Marie Wright/Missy Elliott/Walter Murphy</string>
+			<key>Album</key><string>The Fighting Temptations</string>
+			<key>Genre</key><string>Soundtrack</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>3717624</integer>
+			<key>Total Time</key><integer>231575</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>2003</integer>
+			<key>Date Modified</key><date>2011-10-04T19:43:24Z</date>
+			<key>Date Added</key><date>2019-08-13T23:32:24Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00002790 00000000 00019AB5 00000000 000186B7 00000000 00008000 00000000 00007547 00000000</string>
+			<key>Play Count</key><integer>5</integer>
+			<key>Play Date</key><integer>3649617260</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:34:20Z</date>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Sort Album</key><string>Fighting Temptations</string>
+			<key>Persistent ID</key><string>4BC921D7C98596D9</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Soundtrack/The%20Fighting%20Temptations/01%20Fighting%20Temptation.mp3</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1675</key>
+		<dict>
+			<key>Track ID</key><integer>1675</integer>
+			<key>Name</key><string>Survivor</string>
+			<key>Artist</key><string>Destiny's Child</string>
+			<key>Composer</key><string>Anthony Dent/Beyoncé Knowles/Mathew Knowles</string>
+			<key>Album</key><string>Survivor</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>4073253</integer>
+			<key>Total Time</key><integer>254013</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>15</integer>
+			<key>Year</key><integer>2001</integer>
+			<key>Date Modified</key><date>2019-08-03T00:01:06Z</date>
+			<key>Date Added</key><date>2019-08-14T01:15:59Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3649617514</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:38:34Z</date>
+			<key>Normalization</key><integer>10161</integer>
+			<key>Persistent ID</key><string>01C26594C78655A2</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Destiny's%20Child/Survivor/02%20Survivor.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1677</key>
+		<dict>
+			<key>Track ID</key><integer>1677</integer>
+			<key>Name</key><string>Bootylicious</string>
+			<key>Artist</key><string>Destiny's Child</string>
+			<key>Composer</key><string>Stevie Nicks/Rob Fusari/Falonte Moore/Beyoncé Knowles</string>
+			<key>Album</key><string>Survivor</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>3359337</integer>
+			<key>Total Time</key><integer>207893</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>15</integer>
+			<key>Year</key><integer>2001</integer>
+			<key>Date Modified</key><date>2019-08-03T00:01:32Z</date>
+			<key>Date Added</key><date>2019-08-14T01:15:59Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>8</integer>
+			<key>Play Date</key><integer>3649617722</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:42:02Z</date>
+			<key>Normalization</key><integer>5459</integer>
+			<key>Persistent ID</key><string>0C8CFEF77162185A</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Destiny's%20Child/Survivor/03%20Bootylicious.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1679</key>
+		<dict>
+			<key>Track ID</key><integer>1679</integer>
+			<key>Name</key><string>Shut Up And Drive</string>
+			<key>Artist</key><string>Rihanna</string>
+			<key>Album Artist</key><string>Rihanna</string>
+			<key>Album</key><string>Good Girl Gone Bad</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>3438592</integer>
+			<key>Total Time</key><integer>213280</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>12</integer>
+			<key>Year</key><integer>2007</integer>
+			<key>Date Modified</key><date>2019-08-10T04:26:22Z</date>
+			<key>Date Added</key><date>2019-08-14T01:16:00Z</date>
+			<key>Bit Rate</key><integer>128</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>4</integer>
+			<key>Play Date</key><integer>3649618734</integer>
+			<key>Play Date UTC</key><date>2019-08-26T05:58:54Z</date>
+			<key>Normalization</key><integer>8000</integer>
+			<key>Compilation</key><true/>
+			<key>Artwork Count</key><integer>1</integer>
+			<key>Sort Album Artist</key><string>Rihanna</string>
+			<key>Sort Artist</key><string>Rihanna</string>
+			<key>Persistent ID</key><string>B61F11CC271C49B6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Compilations/Good%20Girl%20Gone%20Bad/05%20Shut%20Up%20And%20Drive.m4a</string>
+			<key>File Folder Count</key><integer>-1</integer>
+			<key>Library Folder Count</key><integer>-1</integer>
+		</dict>
+		<key>1929</key>
+		<dict>
+			<key>Track ID</key><integer>1929</integer>
+			<key>Name</key><string>Lost Ones</string>
+			<key>Artist</key><string>Lauryn Hill</string>
+			<key>Album Artist</key><string>Lauryn Hill</string>
+			<key>Album</key><string>The Miseducation Of Lauryn Hill</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>11029912</integer>
+			<key>Total Time</key><integer>333906</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>16</integer>
+			<key>Year</key><integer>1998</integer>
+			<key>Date Modified</key><date>2019-09-05T22:47:26Z</date>
+			<key>Date Added</key><date>2019-09-06T00:16:50Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Play Count</key><integer>1</integer>
+			<key>Play Date</key><integer>3650570200</integer>
+			<key>Play Date UTC</key><date>2019-09-06T06:16:40Z</date>
+			<key>Normalization</key><integer>2100</integer>
+			<key>Compilation</key><true/>
+			<key>Sort Album</key><string>Miseducation Of Lauryn Hill</string>
+			<key>Persistent ID</key><string>EC5D56265DB6DF67</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Compilations/The%20Miseducation%20Of%20Lauryn%20Hill/02%20Lost%20Ones.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1935</key>
+		<dict>
+			<key>Track ID</key><integer>1935</integer>
+			<key>Name</key><string>Doo Wop (That Thing)</string>
+			<key>Artist</key><string>Lauryn Hill</string>
+			<key>Album Artist</key><string>Lauryn Hill</string>
+			<key>Album</key><string>The Miseducation Of Lauryn Hill</string>
+			<key>Genre</key><string>R&#38;B</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>10559099</integer>
+			<key>Total Time</key><integer>320266</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>16</integer>
+			<key>Year</key><integer>1998</integer>
+			<key>Date Modified</key><date>2019-09-05T22:49:26Z</date>
+			<key>Date Added</key><date>2019-09-06T00:16:50Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1341</integer>
+			<key>Compilation</key><true/>
+			<key>Sort Album</key><string>Miseducation Of Lauryn Hill</string>
+			<key>Persistent ID</key><string>34DD4DA039910802</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Owner/Music/iTunes/iTunes%20Media/Music/Compilations/The%20Miseducation%20Of%20Lauryn%20Hill/05%20Doo%20Wop%20(That%20Thing).m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Name</key><string>Divas 2.7</string>
+			<key>Description</key><string></string>
+			<key>Playlist ID</key><integer>5094</integer>
+			<key>Playlist Persistent ID</key><string>1040336B9D613667</string>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>665</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1449</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1419</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1349</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1351</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>531</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1479</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1643</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1675</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1677</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>757</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1679</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>659</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>657</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>745</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>451</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1357</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1929</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1935</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

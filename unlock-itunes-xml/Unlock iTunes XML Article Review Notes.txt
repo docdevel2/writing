@@ -1,0 +1,20 @@
+Unlock iTunes XML Article Review Notes
+9/6/2022
+
+Comments/questions from editor:
+
+1. changed “Data Type Definition” to “Document Type Definition”
+
+2. There wasn’t a URL for Info [2]. Is the URL I added correct?
+https://​­www.​­apple.​­com/​­au/​­itunes/lp‐and‐extras/​­docs/​­iTunes_Package_Music_Specification5.​­2.​­pdf
+
+My responses:
+
+1. Yes, the DTD should be “Document Type Definition” per the W3C documentation.
+
+2. For Info [2], please use the link to the updated 5.3.14 specification listed below.
+
+<U>https://help.apple.com/itc/musicspec/en.lproj/static.html<U>
+
+
+###

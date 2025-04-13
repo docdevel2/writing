@@ -1,0 +1,15 @@
+List of Figures
+
+@Bi:figure1.gif
+@B:Figure 1: iTunes XML metadata file hierarcy
+
+@Bi:figure2.gif
+@B:Figure 2: DTD in DOCTYPE declaration
+
+@Bi:figure7.gif
+@B:Figure 7: Tag and text
+
+@Bi:figure10.gif
+@B:Figure 10: Loop index rows and columns
+
+###

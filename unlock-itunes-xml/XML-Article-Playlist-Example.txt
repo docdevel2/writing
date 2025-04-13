@@ -1,0 +1,6 @@
+<key>Name</key><string>Justice's Grove</string>
+<key>Artist</key><string>Stanley Clarke</string>
+<key>Album</key><string>East River Drive</string>
+<key>Genre</key><string>Jazz</string>
+<key>Track Number</key><integer>1</integer>
+<key>Year</key><integer>1993</integer>

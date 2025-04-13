@@ -1,0 +1,127 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title></title></head><body><h1>diysvr-draft2.md</h1>
+
+<h2>DIY Token Server</h2>
+
+<p><img src="./images/token-red.png" alt="DIY server token">  </p>
+
+<p>This article is intended as a basic tutorial on how authorization tokens are used in REST APIs. To model the authorization flow, I will use JavaScript to create a simple token server to demonstrate the flow. The token server will be a local HTTP server that will send a token to a client-side REST API.  </p>
+
+<p><a title="Devansvd, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Abstract-flow.png"><img width="512" alt="Abstract-flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Abstract-flow.png/512px-Abstract-flow.png?20210902053239"></a><br>
+Source: Devansvd, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons  </p>
+
+<p>Figure 1. Abstract authorization flow.  </p>
+
+<h2>Cloud APIs</h2>
+
+<p>Many cloud-based applications today use REST APIs [DIYSVR-11] to authenticate user identities and control access. Authentication and authorization protocols are required to ensure data and privacy security. This article focuses on authorization, however, it is worth taking a moment to how authentication and authorization work together as complementary security processes.  </p>
+
+<p>Cloud applications typically require a login and password to access private resources like secure databases. If you deploy multiple applications to access your databases, you use your login ID and password for each application.  Authentication servers are responsible for verifying your identity. They don’t automatically authorize permission to access your database. That is the role of an authorization server.  </p>
+
+<p>In an authorization flow, your authorization server checks with your authentication server to verify your identity before granting database access. A JSON web token (JWT) is commonly used by authorization servers to confirm authentication.  </p>
+
+<p>In this article, you will learn about the principles of token servers with code snippets of a simple JavaScript token server.  </p>
+
+<h2>Authorization tokens</h2>
+
+<p>Security is a critical issue in cloud computing. Two critical factors must be ensured when accessing resources: identity and permission. Identity is confirmed by authentication servers. Permission is confirmed by authorization servers, which grant permissions via tokens.  </p>
+
+<p><img src="./images/fig3-request-token.png" alt="Token request"><br>
+Figure 2. Client app sends a token request to the authorization server and receives a token in response.  </p>
+
+<p>Authorization tokens specify which resources the web application can access, what read, write, and execute permissions are allowed.  Authentication servers typically send JSON web tokens to you, which you then send to your authentication server.  </p>
+
+<p>The OAuth authentication protocol allows you to approve one application interacting with another on your behalf without exposing your password.  </p>
+
+<p>OpenID Connect [DIYSVR-18] authentication functionality is built on top of the OAuth 2.0 framework of specifications (IETF RFC 6749 and 6750).  </p>
+
+<h2>Single sign-on</h2>
+
+<p>Cloud computing has given rise to a proliferation of web applications that require users to create IDs and passwords for each. Single sign-on (SSO) providers offer a solution to this dilemma. SSO technology allows the user to establish their identity via sign-on (login and password), then enable registered apps to verify the user&#39;s identity with the SSO provider. The user is not required to create a new sign-on with each app. Instead, the authorization server returns a token that the application uses to access the user&#39;s resources.  </p>
+
+<p>OpenID Connect enables SSO providers to offer authentication and authorization services for cloud applications. It is used by many SSO providers, including names like Apple, Google, and Microsoft.  </p>
+
+<p><img src="./images/sso-screenshot-2.png" alt="DIY server token"><br>
+Figure 3. Examples of SSO-enabled online applications.  </p>
+
+<h2>Authorization server demonstration code</h2>
+
+<p>Below is an example of a simple token server implemented in JavaScript code. This code will simulate the client application flow.  </p>
+
+<p><strong>Objective:</strong> Set up Node.js as a token server that can be called from a browser.  </p>
+
+<ul>
+<li>Set up Node.js server to serve token then use token for a REST API<br></li>
+<li>Token will be passed to browser as a variable in localStorage<br></li>
+</ul>
+
+<p><strong>The process:</strong>  </p>
+
+<ul>
+<li>Create a Node.js server “tkserver.js”.<br></li>
+<li>Assign a token value to an environment variable.<br></li>
+<li>Client app requests a token from the server.<br></li>
+<li>Client app uses token for a target API.<br></li>
+</ul>
+
+<pre><code>## Source ENV variable   
+
+# Script name: token-setup.src  
+
+myToken=myCode123xyz
+export myToken
+</code></pre>
+
+<p><strong>Run server:</strong>  </p>
+
+<p><code>node token_server.js</code>  </p>
+
+<pre><code>http.createServer(function (request, response) {
+    response.writeHead(200, {
+        &#39;Content-Type&#39;: &#39;text/plain&#39;, 
+        &#39;Origin&#39;: &#39;http://127.0.0.1:8081/&#39;,
+        &#39;Access-Control-Allow-Origin&#39;: &#39;*&#39;,
+        &#39;Vary&#39;: &#39;Origin&#39;
+    });
+    response.end(jsonStr);
+}).listen(8081);
+</code></pre>
+
+<h2>Fetch token</h2>
+
+<pre><code>// fetch-token.js
+
+import fetch from &#39;node-fetch&#39;;
+
+async function postBlob() {
+    const url = &quot;http://localhost:8081/&quot;; 
+    try {
+      const response = await fetch(url); 
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const jsonResp = await response.json();
+      var myKey = jsonResp.myKey;
+      var bearer_token = &#39;Bearer &#39; + myKey
+      console.log(&#39;Bearer token: &#39;, bearer_token);
+    } catch (error) {
+      console.error(error.message);
+    }
+}
+
+postBlob();
+
+</code></pre>
+
+<p>As the debug console shows in Figure 4 below, the <code>fetch-token.js</code> code successfully retrieved the JWT from our mock authorization server.</p>
+
+<p><img src="./images/debug-console.png" alt="DIY server token"><br>
+Figure 4. Output in Debug Console shows the JWT key-value pair fetched from the authorization server.  </p>
+
+<h2>Conclusion</h2>
+
+<p>JSON web tokens offer a secure way to manage access authorization over a REST API. Our JavaScript code snippets demonstrate a client authorization flow where a local authentication server responds to a fetch request for a token.  </p>
+
+<p>Delivering tokens by SSO providers benefits both users and developers. Users are relieved of the burden of sending login IDs and passwords to multiple applications without compromising security, and developers are relieved of the security risks associated with managing and storing IDs and passwords for multiple accounts.  </p>
+
+<h3>End</h3>
+</body></html>

@@ -1,0 +1,341 @@
+# Article SQL & NoSQL Statements
+# MySQL Shell Statements #
+
+# Most common statements
+
+* Session
+from custompy  import config
+cfg = config.DEFAULT
+my_session = mysqlx.get_session( cfg["pwd"] )
+schema_list = my_session.get_schemas()
+
+* Database
+doc_collection = db_name.create_collection('my_collection1')
+my_database = my_session.get_schema('my_db')
+my_database.drop_collection('my_collection')
+coll_list = my_database.get_collections()
+doc_collection = my_database.get_collection('my_collection', check_existence=True)
+doc_collection1 = my_database.get_collection('my_collection1', check_existence=True)
+doc_collection = my_database.create_collection('my_collection') # If collection DOES NOT exist
+
+* Collections
+doc_collection1.add( {"Artist" : "Quincy Jones", "Album" : "Q's Juke Joint"} ).execute() # Add a single document as a JSON object/Python dictionary
+doc_collection1.add( [ {"Artist" : "Ciara", "Album" : "Goodies"}, {"Artist" : "Santana", "Album" : "Supernatural"} ] ).execute() # Add multiple documents with a list
+doc_collection1.remove("Artist like '%Quincy%'").execute()
+doc_collection1.modify()
+doc_collection1.modify("Artist = 'Santana'").set("Artist", "Carlos Santana")
+doc_collection1.modify("Artist like '%Santana'").set("Artist", "Santana")
+doc_collection1.modify("Artist = 'Ciara'").unset("Album")
+my_database.drop_collection('doc_collection')
+
+* Tables
+my_database.get_tables() # Show all tables in database
+sql_table = my_database.get_table('my_table') # Get instance of my_table as sql_table
+sql_table.select().execute()
+sql_table.update().set('Artist', 'Stanley Clarke').where("Album like 'East%'")
+
+* Document results
+result = doc_collection1.find().execute() # Result object; finds all documents in collection
+doc = result.fetch_one() # Returns a single document; must be run immediately after result = doc_collection1.find().execute()
+doc1_result = doc_collection1.find().execute().fetch_one() # Chains methods to fetch 1 document
+docs = result.fetch_all() # Returns a list of documents
+doc_all_result = doc_collection1.find().execute().fetch_all() # Chains methods to fetch all documents
+
+* Table results (MySQL Shell, sec.5.2; X DevAPI, sec. 3.4,4.5, 8.1, 9.5)
+> table_result = sql_table.select().execute() # Returns a Result object (MySQL Shell, sec.5.2), a data set with rows
+> row_result = table_result.fetch_one() # Returns a Row object
+> table_2document = table_result.fetch_one_object() # Returns a document object 
+> listres = table_result.fetch_all() # Returns a List object, containing data sets for all rows
+> colnames = table_result.get_column_names()
+> colcount = table_result.get_column_count()
+
+* Loop multiple docs to collections
+table_2document = table_result.fetch_one_object()
+while table_2document:
+    print(table_2document)
+    doc_collection.add(table_2document)
+    table_2document = table_result.fetch_one_object()
+doc_collection.find().execute()
+my_database.drop_collection('doc_collection')
+
+#
+# Connection
+
+* System variable %userprofile% = C:\Users\Docdevel
+MySQL  localhost:33060+ ssl  SQL > \system dir %userprofile%\Documents
+
+* Python scripts directory
+SQL > \system dir %userprofile%\Documents\cgi
+
+* Other paths
+strToFile(show_glob_vars, "C:\\Users\\Docdevel\\Documents\\\cgi\\data\\show_glob_vars.txt")
+
+;* Set MySQL mode
+\sql
+
+;* Connect and start local X DevAPI mysqlx server
+\connect mysqlx://Docdevel@localhost:33060
+
+;* Connect and start local classic mysql server
+\connect mysql://Docdevel@localhost:3306
+
+#
+# Syntax for JSON object vs. Python dictionary 
+
+> JSON: {'key string': value}
+
+> Python: {'key string': value}
+
+#
+# SQL Statments
+#
+
+* CREATE DATABASE
+CREATE DATABASE my_db;
+
+* SELECT DATABASE
+USE my_db; Selects database "my_db"
+
+* SHOW TABLES 
+SHOW TABLES; #Shows ALL tables in the current database.
+
+* CREATE TABLE 
+CREATE TABLE my_table ( Artist VARCHAR(150), 
+Album VARCHAR(150), 
+Song VARCHAR(150), 
+Track CHAR(5), 
+RelYear CHAR(4), 
+Genre CHAR(10) ); 
+
+* DROP TABLE # Deletes table, contents and schema.
+DROP TABLE my_table; 
+	
+* INSERT (3 Rows)
+INSERT INTO my_table (Artist,Album,Song,Track,RelYear,Genre) 
+VALUES (
+'Aretha Franklin',
+'A Rose Is Still A Rose',
+'A Rose Is Still A Rose',
+'1',
+'1998',
+'R&B');
+
+INSERT INTO my_table (Artist,Album,Song,Track,RelYear,Genre) 
+VALUES (
+'Santana',
+'Supernatural',
+'Smooth',
+'5',
+'1999',
+'Rock');
+
+INSERT INTO my_table (Artist, Album, Song, Track, RelYear, Genre) 
+VALUES (
+'Stanley Clarke',
+'East River Drive',
+'East River Drive',
+'4',
+'1993',
+'Jazz');
+
+INSERT INTO my_table (Artist,Album,Song,Track,RelYear,Genre) 
+VALUES (
+'Ciara',
+'Goodies',
+'Goodies',
+'1',
+'2004',
+'R&B');
+
+INSERT INTO my_table (Artist,Album,Song,Track,RelYear,Genre) 
+VALUES (
+'Return To Forever',
+'Hymn Of The Seventh Galaxy',
+'Space Circus',
+'5',
+'1973',
+'Jazz');
+
+* SELECT TABLE 
+SELECT * FROM my_table; Shows specified table and all table.
+SELECT * FROM my_table WHERE Artist LIKE '%$artistname%';
+
+* SHOW DATABASES #
+SHOW DATABASES; # Shows ALL database.
+SELECT DATABASE(); #Shows current database.
+
+#
+# NoSQL Statments
+#
+
+;* Connect and start local X DevAPI mysqlx server
+\connect mysqlx://Docdevel@localhost:33060
+
+#
+# Configuration file C:/Users/Docdevel/Documents/cgi/custompy/mysqlshrc.py
+# This file is executed at MySQL startup
+#
+import sys
+
+# Hard paths
+homedir = "C:/Users/Docdevel"
+cgidir = "C:/Users/Docdevel/Documents/cgi/"
+
+# Append the additional module paths
+sys.path.append('%MYSQLSH_USER_CONFIG_HOME%')
+sys.path.append(cgidir)
+
+#
+# End Configuration file
+
+
+#This function tests MySQL Shell API
+#
+from custompy  import config
+cfg = config.DEFAULT
+#
+mySession = mysqlx.get_session( cfg["pwd"] )
+#
+# Get a list of all available schemas
+schemaList = mySession.get_schemas()
+#
+my_database = mySession.get_schema('my_db')
+
+# Create new collection
+#
+quoted_name = mySession.quote_name('my_collection1')
+# Set current database
+currschema = mySession.set_current_schema(my_database.name)
+
+# Collections & Documents
+#
+if my_database.get_collection('my_collection1', check_existence=True):
+    my_database.drop_collection('my_collection1')
+    print ( '\nmy_collection1 Dropped\n' )
+#
+# Create collections
+doc_collection1 = my_database.create_collection('my_collection')
+doc_collection2 = my_database.create_collection('my_collection2')
+doc_collection3 = my_database.create_collection('my_collection3')
+
+# Get collections
+my_database.get_collections()
+
+# Get a specific collection
+doc_collection1 = my_database.get_collection('my_collection1')
+
+# Does doc_collection1 exist?
+doc_collection1.exists_in_database()
+
+# Add document to collection
+doc_collection1.add( [ {"artist" : "Aretha Franklin", "album" : "A Rose is Still a Rose"},
+              {"artist" : "Ciara", "album" : "Goodies"},
+              {"artist" : "Santana", "album" : "Supernatural"},
+              {"artist" : "Stanley Clark", "album" : "East River Drive"},
+              {"artist" : "Herbie Hancock", "album" : "The New Standard"},
+              {"artist" : "Return to Forever", "album" : "Hymn Of The Seventh Galaxy"} ] ).execute()
+
+# Add one new document to collection
+doc_collection1.add( [ {"Artist" : "Quincy", "album" : "Q's Juke Joint"} ] ).execute()
+
+# NOTE: Use double quotes for keys and value strings as apostrophes in strings may be interpreted as single quotes.
+
+# The following statements report information about doc_collection1 collection
+doc_collection1.find("artist LIKE '%Herb%'").execute()
+#
+# Query results
+result = doc_collection1.find().execute()
+doc = result.fetch_one()
+
+# Iterate through doc_collection1 documents.
+while doc:
+    print('\ndoc.artist result:\n', doc)
+    doc = result.fetch_one()
+
+# Show collection in database
+my_database.get_collections()
+#
+# End of createNuColl() function
+
+# Variables
+my_collection = 'my_collection'
+#
+mySession.close();
+#
+
+# Output table in JSON format
+shell.options.set('resultFormat','json/array') # Output format applies to RowResult after select/execute query
+shell.options.set('resultFormat','ndjson') # Output format applies to RowResult after select/execute query
+session.sql('select * from testtable;')
+mySession.get_schemas() # Show/list all databases
+mySession.set_current_schema('my_db')
+session.sql("show tables;")
+session.sql('use musictest1;')
+jout = session.sql('select * from testtable;') # Assign output to var jout
+jout # Display to screen in interactive mode.
+
+Note: Attempting to write directly to a file from a SQL session (see ex. 1 & 2 below) will result in the following error message:
+ERROR: 1290: SqlExecute.execute: The MySQL server is running with the --secure-file-priv option so it cannot execute this statement
+
+Ex. 1: session.sql('select * from testtable into outfile "tempjsonfile.txt";')
+Ex. 2: session.sql('select * from testtable into outfile "C:\Users\Docdevel\Documents\cgi\data\tempjsonfile.txt";')
+
+# Dump or Export tables
+
+* API database commands
+> session.sql('SELECT DATABASE();') # Show current database
+> mySession.get_schemas() # Show all databases
+> my_database = mySession.get_schema('my_db')
+> mt1 = mySession.get_schema('musictest1')
+
+* API table commands
+> # Returns a list of all tables in schema 'my_db'
+> my_database.get_table('my_table') # Returns Table named 'my_table' from schema 'my_db
+> mt1.get_tables() # Returns a list of all tables in schema 'musictest1'
+> mt1.get_table('testtable') # Returns Table named 'testtable' from schema 'musictest1'
+
+* API Dump or Export tables
+Syntax: util.export_table ( str table, str outputUrl, dict options ) 
+e.g. 
+> util.export_table ( "testtable", 'C:\\Users\\Docdevel\\Documents\\cgi\\data\\testtabledumpfile.txt' )
+or 
+> util.export_table ( "testtable", 'C:/Users/Docdevel/Documents/cgi/data/testtabledumpfile.txt' )
+
+dump_tables ( str schema, list tables, str outputUrl, dict options ) # Syntax for multiple tables
+
+* API import table
+Syntax: util.import_json("/tmp/products.json", {schema: "mydb", collection: "products"})
+> util.import_table ( "C:/Users/Docdevel/Documents/cgi/data/testtabledumpfile.txt", {"schema":"my_db", "table": "nutable"} )
+
+* API table select
+> my_database.get_table('my_table')
+> tbl1 = my_database.get_table('my_table')
+> tbl1.select('*').execute()
+
+* API table results
+> tblres = tbl2.select().execute() # Returns a RowResult, a data set with rows
+
+> rowres = tblres.fetch_one() # Returns a Row object
+> dictres = tblres.fetch_one_object() # Returns a Dictionary object containing row information
+> listres = tblres.fetch_all() # Returns a List object, containing data sets for all rows
+
+> colnames = tblres.get_column_names()
+> colcount = tblres.get_column_count()
+
+# Add table result "dictres" dictionary object to collection
+> doc_collection2.add(dictres).execute()
+
+# File output
+def strToFile(text, filename):  
+    """Write a file with the given name and the given filename"""
+    output = open(filename,"w")
+    output.write(text)
+    output.close()
+strToFile(jout, 'C:/Users/Docdevel/Documents/cgi/data/testjoutfile.txt')
+
+repr(dictres) # Converts object to Python string type
+jout = repr(dictres) # Output text to file of json object/Python dict form with key-value pair list within curly brackets
+jout = repr(listres) # Output text to file of nested list in Python list form within square brackets
+
+
+###

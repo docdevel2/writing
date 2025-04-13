@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Major Version</key><integer>1</integer>
+	<key>Minor Version</key><integer>1</integer>
+	<key>Date</key><date>2022-03-28T03:30:14Z</date>
+	<key>Application Version</key><string>12.12.3.5</string>
+	<key>Features</key><integer>5</integer>
+	<key>Show Content Ratings</key><true/>
+	<key>Music Folder</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/</string>
+	<key>Library Persistent ID</key><string>38088EE196372CF3</string>
+	<key>Tracks</key>
+	<dict>
+		<key>1011</key>
+		<dict>
+			<key>Track ID</key><integer>1011</integer>
+			<key>Name</key><string>Watermelon Man</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>16225905</integer>
+			<key>Total Time</key><integer>432520</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:43:08Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>2508</integer>
+			<key>Persistent ID</key><string>7846533BCE10DF1A</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/01%20Watermelon%20Man.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1013</key>
+		<dict>
+			<key>Track ID</key><integer>1013</integer>
+			<key>Name</key><string>Cantaloupe Island</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>11520011</integer>
+			<key>Total Time</key><integer>334266</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:44:00Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>2984</integer>
+			<key>Persistent ID</key><string>949A94B03F859A67</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/02%20Cantaloupe%20Island.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1015</key>
+		<dict>
+			<key>Track ID</key><integer>1015</integer>
+			<key>Name</key><string>Maiden Voyage</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>15717377</integer>
+			<key>Total Time</key><integer>479960</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:45:06Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1628</integer>
+			<key>Persistent ID</key><string>34A58FE59BAD9637</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/03%20Maiden%20Voyage.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1017</key>
+		<dict>
+			<key>Track ID</key><integer>1017</integer>
+			<key>Name</key><string>Speak Like A Child</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>15283264</integer>
+			<key>Total Time</key><integer>471906</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:46:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Persistent ID</key><string>716C5D69F4089BC1</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/04%20Speak%20Like%20A%20Child.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1019</key>
+		<dict>
+			<key>Track ID</key><integer>1019</integer>
+			<key>Name</key><string>Tell Me A Bedtime Story</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>9990948</integer>
+			<key>Total Time</key><integer>306706</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:46:56Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Persistent ID</key><string>30CA140A2A242835</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/05%20Tell%20Me%20A%20Bedtime%20Story.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1021</key>
+		<dict>
+			<key>Track ID</key><integer>1021</integer>
+			<key>Name</key><string>Chameleon</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>31056277</integer>
+			<key>Total Time</key><integer>944333</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-05T05:46:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Skip Count</key><integer>1</integer>
+			<key>Skip Date</key><date>2022-01-14T03:38:32Z</date>
+			<key>Normalization</key><integer>1631</integer>
+			<key>Persistent ID</key><string>31B3370E588C7BE7</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/06%20Chameleon.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1023</key>
+		<dict>
+			<key>Track ID</key><integer>1023</integer>
+			<key>Name</key><string>Actual Proof</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>19165045</integer>
+			<key>Total Time</key><integer>584946</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:50:00Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1638</integer>
+			<key>Persistent ID</key><string>060CA3FD53D7925D</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/07%20Actual%20Proof.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1025</key>
+		<dict>
+			<key>Track ID</key><integer>1025</integer>
+			<key>Name</key><string>Rockit</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>10824728</integer>
+			<key>Total Time</key><integer>329906</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>1983</integer>
+			<key>Date Modified</key><date>2019-09-05T05:46:50Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1605</integer>
+			<key>Persistent ID</key><string>20659D21C1E9A62E</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/08%20Rockit.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1027</key>
+		<dict>
+			<key>Track ID</key><integer>1027</integer>
+			<key>Name</key><string>You've Got It Bad Girl</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Ken Burns Jazz</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>14177416</integer>
+			<key>Total Time</key><integer>433386</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Track Count</key><integer>9</integer>
+			<key>Year</key><integer>2000</integer>
+			<key>Date Modified</key><date>2019-09-06T21:51:48Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Persistent ID</key><string>54A7B36DDE4ED0DB</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Ken%20Burns%20Jazz/09%20You've%20Got%20It%20Bad%20Girl.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1029</key>
+		<dict>
+			<key>Track ID</key><integer>1029</integer>
+			<key>Name</key><string>Riot</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>10454379</integer>
+			<key>Total Time</key><integer>272533</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:37:34Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Persistent ID</key><string>32CDA4A1744B03E0</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/01%20Riot.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1031</key>
+		<dict>
+			<key>Track ID</key><integer>1031</integer>
+			<key>Name</key><string>Speak Like A Child</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>17263330</integer>
+			<key>Total Time</key><integer>451573</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:38:42Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1467</integer>
+			<key>Persistent ID</key><string>BE8973FA50D27FF1</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/02%20Speak%20Like%20A%20Child.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1033</key>
+		<dict>
+			<key>Track ID</key><integer>1033</integer>
+			<key>Name</key><string>First Trip</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>13366467</integer>
+			<key>Total Time</key><integer>349600</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:43:56Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1375</integer>
+			<key>Persistent ID</key><string>EE9393B1061D4654</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/03%20First%20Trip.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1035</key>
+		<dict>
+			<key>Track ID</key><integer>1035</integer>
+			<key>Name</key><string>Toys</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>13105266</integer>
+			<key>Total Time</key><integer>340800</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:49:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1276</integer>
+			<key>Persistent ID</key><string>C10193901451F9BA</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/04%20Toys.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1037</key>
+		<dict>
+			<key>Track ID</key><integer>1037</integer>
+			<key>Name</key><string>Goodbye to Childhood</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>10645509</integer>
+			<key>Total Time</key><integer>285600</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:54:18Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Persistent ID</key><string>3AC0DF7BD149A6B6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/05%20Goodbye%20to%20Childhood.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1039</key>
+		<dict>
+			<key>Track ID</key><integer>1039</integer>
+			<key>Name</key><string>The Sorcerer</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album</key><string>Speak Like A Child</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>AAC audio file</string>
+			<key>Size</key><integer>12368636</integer>
+			<key>Total Time</key><integer>324653</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Track Count</key><integer>6</integer>
+			<key>Year</key><integer>1968</integer>
+			<key>Date Modified</key><date>2019-09-01T00:55:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>256</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Normalization</key><integer>1259</integer>
+			<key>Sort Name</key><string>Sorcerer</string>
+			<key>Persistent ID</key><string>96B9A89AB8A16177</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/Speak%20Like%20A%20Child/06%20The%20Sorcerer.m4a</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1041</key>
+		<dict>
+			<key>Track ID</key><integer>1041</integer>
+			<key>Name</key><string>New York Minute</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Don Henley/Jai Winding/Danny Kortchmar</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>10316058</integer>
+			<key>Total Time</key><integer>515683</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>1</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:08Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 000007B0 00000000015AF8C0 00000000 009D4F6E 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>1F7E4EEA00EFD546</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/01%20New%20York%20Minute.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1043</key>
+		<dict>
+			<key>Track ID</key><integer>1043</integer>
+			<key>Name</key><string>Mercy Street</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Peter Gabriel</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>10362006</integer>
+			<key>Total Time</key><integer>517982</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>2</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000AEC 00000000015C8184 00000000 009E0305 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>920B3F4FFB4A52DC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/02%20Mercy%20Street.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1045</key>
+		<dict>
+			<key>Track ID</key><integer>1045</integer>
+			<key>Name</key><string>Norwegian Wood</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>John Lennon/Paul McCartney</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9743964</integer>
+			<key>Total Time</key><integer>487079</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>3</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 000006FC 000000000147B9F4 00000000 009494BC 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>9F64FB0CCDE8D8AC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/03%20Norwegian%20Wood.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1047</key>
+		<dict>
+			<key>Track ID</key><integer>1047</integer>
+			<key>Name</key><string>When Can I See You</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Babyface</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>7554888</integer>
+			<key>Total Time</key><integer>377626</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>4</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000708 0000000000FE12E8 00000000 00732DB7 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>2F48B0975DF6C5AD</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/04%20When%20Can%20I%20See%20You.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1049</key>
+		<dict>
+			<key>Track ID</key><integer>1049</integer>
+			<key>Name</key><string>You've Got It Bad Girl</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Stevie Wonder/Syreeta Wright</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>8709002</integer>
+			<key>Total Time</key><integer>435330</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>5</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 000008F4 000000000124E57C 00000000 0084C9E1 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>33F431D95ABA8733</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/05%20You've%20Got%20It%20Bad%20Girl.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1051</key>
+		<dict>
+			<key>Track ID</key><integer>1051</integer>
+			<key>Name</key><string>Love Is Stronger Than Pride</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Sade Adu/Andrew Hale/Stuart Matthewman</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9611809</integer>
+			<key>Total Time</key><integer>480470</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>6</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000A08 0000000001434468 00000000 00929068 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>0CF79A9FE5E23B19</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/06%20Love%20Is%20Stronger%20Than%20Pride.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1053</key>
+		<dict>
+			<key>Track ID</key><integer>1053</integer>
+			<key>Name</key><string>Scarborough Fair</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Art Garfunkel/Paul Simon</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>10090347</integer>
+			<key>Total Time</key><integer>504398</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>7</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000924 0000000001535F4C 00000000 0099DDCC 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>6FFAF0921E9FEDBC</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/07%20Scarborough%20Fair.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1055</key>
+		<dict>
+			<key>Track ID</key><integer>1055</integer>
+			<key>Name</key><string>Thieves In The Temple</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Prince</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>9064244</integer>
+			<key>Total Time</key><integer>453093</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>8</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000984 000000000130D8EC 00000000 008A35A2 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>0FC059A699F36DF0</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/08%20Thieves%20In%20The%20Temple.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1057</key>
+		<dict>
+			<key>Track ID</key><integer>1057</integer>
+			<key>Name</key><string>All Apologies</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Kurt Cobain</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>6167784</integer>
+			<key>Total Time</key><integer>308271</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>9</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000A2C 0000000000CF6444 00000000 005E0359 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>145D35BEC5453308</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/09%20All%20Apologies.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+		<key>1059</key>
+		<dict>
+			<key>Track ID</key><integer>1059</integer>
+			<key>Name</key><string>Manhattan</string>
+			<key>Artist</key><string>Herbie Hancock</string>
+			<key>Album Artist</key><string>Herbie Hancock</string>
+			<key>Composer</key><string>Herbie Hancock</string>
+			<key>Album</key><string>The New Standard</string>
+			<key>Genre</key><string>Jazz</string>
+			<key>Kind</key><string>MPEG audio file</string>
+			<key>Size</key><integer>4907115</integer>
+			<key>Total Time</key><integer>245237</integer>
+			<key>Disc Number</key><integer>1</integer>
+			<key>Disc Count</key><integer>1</integer>
+			<key>Track Number</key><integer>10</integer>
+			<key>Year</key><integer>1996</integer>
+			<key>Date Modified</key><date>2011-02-22T02:06:10Z</date>
+			<key>Date Added</key><date>2022-01-14T02:21:33Z</date>
+			<key>Bit Rate</key><integer>160</integer>
+			<key>Sample Rate</key><integer>44100</integer>
+			<key>Comments</key><string> 00000000 00000210 00000900 0000000000A4FAF0 00000000 004AC6DB 00000000 00000000 00000000 00000000 00000000 00000000</string>
+			<key>Sort Album</key><string>New Standard</string>
+			<key>Persistent ID</key><string>63DD84F3E62EEAB6</string>
+			<key>Track Type</key><string>File</string>
+			<key>Location</key><string>file://localhost/C:/Users/Docdevel/Music/iTunes/iTunes%20Media/Music/Herbie%20Hancock/The%20New%20Standard/10%20Manhattan.mp3</string>
+			<key>File Folder Count</key><integer>5</integer>
+			<key>Library Folder Count</key><integer>1</integer>
+		</dict>
+	</dict>
+	<key>Playlists</key>
+	<array>
+		<dict>
+			<key>Name</key><string>Herbie Hancock Mode</string>
+			<key>Description</key><string></string>
+			<key>Playlist ID</key><integer>5448</integer>
+			<key>Playlist Persistent ID</key><string>F26260266D8923AC</string>
+			<key>All Items</key><true/>
+			<key>Playlist Items</key>
+			<array>
+				<dict>
+					<key>Track ID</key><integer>1011</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1013</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1015</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1017</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1019</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1021</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1023</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1025</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1027</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1041</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1043</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1045</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1047</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1049</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1051</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1053</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1055</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1057</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1059</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1029</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1031</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1033</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1035</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1037</integer>
+				</dict>
+				<dict>
+					<key>Track ID</key><integer>1039</integer>
+				</dict>
+			</array>
+		</dict>
+	</array>
+</dict>
+</plist>

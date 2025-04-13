@@ -1,0 +1,10 @@
+Name	Artist	Composer	Album	Genre	Year
+A Rose Is Still A Rose	Aretha Franklin	Lauryn Hill	A Rose Is Still A Rose	R&B	1998
+Goodies	Ciara	Ciara	Goodies	R&B	2004
+Smooth	Santana Feat. Rob Thomas	Itaal Shur	Supernatural	Rock	1999
+East River Drive	Stanley Clarke	Clarke's	East River Drive	Jazz	1993
+New York Minute	Herbie Hancock	Don Henley/Jai Winding/Danny Kortchmar	The New Standard	Jazz	1996
+Space Circus	Return To Forever		Hymn Of The Seventh Galaxy	Jazz	1973
+Jook Joint Intro	Quincy Jones	Composer/writer Unknown	Q's Jook Joint	Jazz	1995
+Masquerade	The Phantom Of The Opera Original London Cast	Andrew Lloyd Webber	Highlights From The Phantom Of The Opera: The Original Cast Recording	Soundtrack	1987
+No Good Deed	Idina Menzel		Wicked (Original Broadway Cast Recording)	Soundtrack	2003

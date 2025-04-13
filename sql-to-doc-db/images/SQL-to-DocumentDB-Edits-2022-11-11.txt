@@ -1,0 +1,5 @@
+SQL-to-DocumentDB-Edits
+
+1. Replace "interchange" with "exchange", p.1
+
+###
