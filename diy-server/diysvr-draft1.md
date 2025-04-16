@@ -11,6 +11,8 @@ In this article, you will learn how to create a token server in JavaScript. The 
 <a title="Devansvd, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Abstract-flow.png"><img width="512" alt="Abstract-flow" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Abstract-flow.png/512px-Abstract-flow.png?20210902053239"></a>  
 Source: Devansvd, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons  
 
+Figure 1. Abstract authorization flow.  
+
 ## Cloud APIs  
 
 Many cloud-based applications today use REST APIs [DIYSVR-11] to authenticate user identities and control access. Authentication and authorization protocols are required to ensure that data and privacy security. Authentication focuses on verifying identity, while authorization focuses on access to resources. This article focuses on authorization, however, it is worth taking a moment to how authentication and authorization work together as complementary security processes.  
@@ -26,24 +28,24 @@ In this article, you will learn about the principles of token servers with code 
 Security is a critical issue in cloud computing. It is necessary to ensure two critical factors when accessing resources. Those factors are: identity and permission. Identity is confirmed by authentication servers. Permission is confirmed by authorization servers. Authorization servers grant permissions via tokens.  
 
 ![Token request](./images/fig3-request-token.png)  
-(Insert token request image.)  
+Figure 2. Client app sends token request to authorization server and receives token in response.  
 
 Authorization tokens specify which resources the web application can access, what read, write, and execute permissions are allowed.  Authentication servers typically send JSON web tokens to you, which you then send to your authentication server.  
 
 The OAuth authentication protocol allows you to approve one application interacting with another on your behalf without exposing your password.  
 
-OpenID Connect[DIYSVR-18] authentication functionality is built on top of the OAuth 2.0 framework of specifications (IETF RFC 6749 and 6750).  
+OpenID Connect [DIYSVR-18] authentication functionality is built on top of the OAuth 2.0 framework of specifications (IETF RFC 6749 and 6750).  
 
 ## Single sign-on  
 
 Cloud computing has given rise to a proliferation of web applications that require users to create IDs and passwords for each. Single sign-on (SSO) providers offer a solution to this dilemma. SSO technology allows the user to establish their identity via sign-on (login and password), then enable registered apps to verified the user's identity with the SSO provider. The user is not required to create a new sign-on with each app. Instead, the authorization server returns a token that the application uses to access the user's resources.  
 
-![SSO image](./images/tbd)  
-(Insert SSO image.)  
-
 OpenID Connect enables SSO providers to offer authentication and authorization services for cloud applications. It is used by many SSO providers, including names like Apple, Google, and Microsoft.  
 
-## Authorization flow demonstration code  
+![DIY server token](./images/sso-screenshot-2.png)  
+Figure 3. Examples of SSO enabled online applications.  
+
+## Authorization server demonstration code  
 
 Below is an example of a simple token server implemented in JavaScript code. This code will simulate the client application flow.  
 
@@ -60,19 +62,13 @@ Below is an example of a simple token server implemented in JavaScript code. Thi
 * Browser uses token for another API.  
 
 ```
+## Source ENV variable   
 
-## Source ENV variable  
-
-
-# Script name: token-setup.src
-# This script sets and exports a token value in an ENV variable.
-# Source the scripts from the command line.
-# Import the ENV var into JS with the process.env.VARIABLE_NAME property.
+# Script name: token-setup.src  
 
 myToken=myCode123xyz
 export myToken
 ```
-
 
 **Run server:**  
 
@@ -80,10 +76,6 @@ export myToken
 
 ```
 http.createServer(function (request, response) {
-    // Send the HTTP header
-    // HTTP Status: 200 : OK
-    // Content Type: text/plain
-    // 'Access-Control-Allow-Origin': 'http://127.0.0.1:8081/'
     response.writeHead(200, {
         'Content-Type': 'text/plain', 
         'Origin': 'http://127.0.0.1:8081/',
@@ -98,28 +90,34 @@ http.createServer(function (request, response) {
 ## Fetch token  
 
 ```
+// fetch-token.js
+
+import fetch from 'node-fetch';
+
 async function postBlob() {
-  const url = "http://localhost:8081/"; 
-  // Access requires local token server header {'Access-Control-Allow-Origin': '*'}
-
-  console.log('Running getToken()');
-
-  try {
-    const response = await fetch(url); // No header
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
+    const url = "http://localhost:8081/"; 
+    try {
+      const response = await fetch(url); 
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
+      }
+      const jsonResp = await response.json();
+      var myKey = jsonResp.myKey;
+      var bearer_token = 'Bearer ' + myKey
+      console.log('Bearer token: ', bearer_token);
+    } catch (error) {
+      console.error(error.message);
     }
-    const jsonResp = await response.json();
-    var myKey = jsonResp.myKey;
-    var bearer_auth = 'Bearer ' + myKey
+}
 
-  } catch (error) {
-    console.error(error.message);
-  }
+postBlob();
 
 ```
 
-(Insert image of result in console.)  
+Figure 4 below shows that the `fetch-token.js` code successfully retrieved the JWT from our mock authorization server.
+
+![DIY server token](./images/debug-console.png)  
+Figure 4. Output in Debug Console shows the JWT key-value pair fetched from the authorization server.  
 
 ## Conclusion  
 
