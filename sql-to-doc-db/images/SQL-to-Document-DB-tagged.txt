@@ -1,0 +1,116 @@
+@D:Three Steps from SQL to a Document Database
+
+@T:How I used a Python API to migrate my Music Library from SQL to a document database
+
+@V:Overview
+
+@L:In this article, I will show you how I used a Python application programming interface (API) to migrate my music library from a SQL relational database to a NoSQL document database. Using the Python X DevAPI in the MySQL Shell application, I will highlight some basics about document databases, the Python methods that I used, and the database tool that enables migration. Readers who should get the most out of this article are those that have some basic familiarity with the structured query language (SQL) and with the Python programming language.
+
+@ZT:Why migrate from SQL to document?
+
+@L:I have my existing personal music library in a SQL relational database containing music metadata — artist, song title, album title, track number, genre, release year — that I want to migrate to a document database. For the purpose of this article, I will use a few examples from my library.
+
+@Bi:figure1.gif
+@B:Figure 1: Sample table of songs from my SQL library
+
+@L:SQL relational databases have been dominant for decades, making up 60% of the database market in of 2019 according to a ScaleGrid Database Trends report. In recent years, use of document databases has increased, largely driven by the requirements of big data. One of the criticisms of relational databases is that their schema is rigid. All data fields must be defined in advance with identical fields in every row in a table making it difficult to make schema changes later.
+
+By contrast, document store databases, sometimes referred to as NoSQL, do not have a fixed schema. Document databases do not require each document to have the same fields, but they can. In fact, it is possible to have different fields in each document throughout the database. That flexibility is one of the key advantages of a document store over a relational store. It is the reason I decided to migrate because it allows me to easily add new metadata to my music library. That could include metadata such as artist background information, song credits, and/or other miscellaneous metadata that may not be immediately available.
+
+@ZT:What is a JSON document?
+
+@L:In many document store systems, documents are JavaScript object notation (JSON) objects, or JSON-like objects. JSON is becoming increasingly popular as a standard for data interchange and storage and is beginning to replace the extensible markup language (XML) as a dominant data exchange format, particularly for music metadata. JSON documents are lightweight, language-independent, and human readable. In short, JSON documents are elegant in their simplicity. Many popular music APIs provide JSON formatted metadata. Some of these APIs include Amazon, Apple Music, Spotify, SoundCloud, and others.
+
+The JSON format eases development because it is object-oriented and easier than XML to parse since JSON documents are comprised of a comma-separated list of one or more key-value pairs. The simplest form of a JSON document is <C>{key:value}<C>. You will note that this is the same form as a Python dictionary. From a software development perspective, JSON is well suited to object-oriented programming languages like Python, JavaScript, and others.
+
+Let’s consider that we have a simple document case containing an artist name and album name. The document instance would be defined as follows:
+
+@LI:{"Artist" : "Quincy Jones", "Album" : "Q's Jook Joint"}
+
+@L:A group of related documents is referred to as a collection. As an analogy between a relational database and a document database, a table in a relational database is equivalent to a collection in a document database. Each row in a table is equivalent to a document in the collection and each field name (column) in a table is equivalent to a key in a document.
+
+@ZT:API methods for database migration
+
+@L:Now that we know what a document store is, I’ll show how to use a Python API to migrate a relational database to a document database. My source database was created with MySQL so I used the X DevAPI interface in the MySQL Shell 8.0 application which allows me to access both tables and documents in a database. 
+To accomplish my goal, I’ll use table methods to access data in tables, and document methods to build and verify my documents. Three steps are required to migrate data: 1) create a collection, 2) fetch rows from a table, and 3) add fetched rows to the document collection.
+
+@L:Table methods:
+
+@LI:
+table.select() # Returns a data set with rows
+result.fetch_one_object() # Returns a dictionary/json object
+
+@L:Document methods:
+
+@LI:
+collection.add() # Inserts a document into a collection
+collection.find() # Returns data set with all documents in a collection
+
+@ZT:The process
+
+@L:The three steps that I identified above assume that the relational database exists, that a database connection has already been established, the source table exists. Before starting the migration process, I’m assuming that a connection to the database has already been made and that the following instances already exist:
+
+@LI:
+my_session = mysqlx.get_session( <URI> ) # Session instance
+my_database = my_session.get_schema('my_db')
+
+@L:The first step in the migration process is to create the target collection.
+
+<B><I>Step 1: Create collection<I><B>
+
+@LI:doc_collection1 = my_database.create_collection('my_collection1')
+
+@L:In the statement above, I’ve created a collection object named <C>my_collection1<C> using the <C>create_collection()<C> method and assigned it to <C>doc_collection1<C> which will be the target document collection. I will subsequently add, update, or remove documents as necessary.
+
+<B><I>Step 2: Fetch table row data<I><B>
+
+@L:In the next step, I need to extract my metadata from the source SQL database. This metadata is in a table named sql_table. To extract data in a table row, I execute the statements below. 
+
+@LI:
+table_result = sql_table.select().execute()
+table_2document = table_result.fetch_one_object()
+
+@Bi:figure2.gif
+@B:Figure 2: Fetch a JSON document from a SQL table
+
+@L:In the code above, the <C>select()<C> method is analogous to the SELECT statement in SQL. It returns a result that is a list of rows. Next, I need to fetch each row, convert it to a JSON object, and add it to my collection.  The <C>fetch_one_object()<C> method fetches a row from the table as a JSON object.
+
+The table_2document result object shows the key:value strings of the metadata fetched from one row of the table. (See Figure 2) While there is a <C>fetch_one()<C> method that could fetch a table row, the result is not a JSON object and therefore cannot be added directly to a document. Note that SQL statements executed through the X DevAPI must end with the <C>execute()<C> function because they are executed only when that function is called. If omitted, the statement will be ignored.
+
+<B><I>Step 3: Add document to collection<I><B>
+
+Each table_2document fetched from <C>my_table<C> is then added to <C>doc_collection1<C> with the <C>add()<C> method which adds a JSON document to a collection.
+
+@LI:doc_collection1.add(table_2document).execute()
+
+@ZT:Build collection
+
+@L:With these three basic steps, I can add a single document to doc_collection1. To migrate the entire SQL table to a collection, the code below iterates through each row in the table with the <C>add()<C> method.
+
+@LI:
+    table_result = sql_table.select().execute()
+    table_2document = table_result.fetch_one_object()
+    while table_2document:
+        doc_collection1.add(table_2document).execute()
+        table_2document = table_result.fetch_one_object()
+
+@L:The result in Fig. 3 shows two of the five documents added to <C>doc_collection1<C>. You will notice that there is an extra "_id" field that is automatically added to each document. It is a virtual index that MySQL automatically adds to each document in a collection. See the MySQL 8.0 manual for more information on document indexing.
+
+@Bi:figure3.gif
+@B:Figure 3: Sample of documents added to collection
+
+@ZT:Document updates
+
+@L:After I have migrated my SQL table to the document collection, I will continue to either build on it with new metadata documents, update incorrect or incomplete documents, or remove documents. As we have already seen, I can use the <C>add()<C> method to add new documents to my library or simply add new fields (key-value pairs), effectively changing the schema on-the-fly.
+
+If for example I need to change the spelling of an artist’s name, I can use the <C>doc_collection1.modify()<C> method. Note that the percent (%) wildcard can be used in the search condition string for these methods as illustrated with the <C>remove()<C> method in the example below. In addition, note that I have used explicit strings in the <C>modify()<C> and <C>set()<C> methods to simplify the examples and to keep the focus on function. It is however, good practice to use parameterized placeholders instead of explicit strings.
+
+@LI:
+doc_collection1.modify("Artist = 'Santana'").set("Artist", "Carlos Santana")
+doc_collection1.remove("Artist like 'Quincy%'")
+
+@L:For a more comprehensive list of available create, remove, update, delete (CRUD) methods, see MySQL 8.0 Reference Manual.
+
+@ZT:Finally
+
+@L:If you want to use Python to automate the creation and maintenance of your music library and want to be able to access music metadata from a wide variety of sources, most deliver content in JSON format. Since document store databases tend to be based on the JSON format or a JSON-like format, and music metadata is widely available in that format, choosing JSON as a preferred format is a logical choice. If your personal music library is in an existing SQL database and you are considering document store as an option, this article may help you in along your migration path.
